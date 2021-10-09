@@ -1,18 +1,21 @@
 import React from "react";
 import "./LandingPage.scss";
+import Carousel from "../../components/carousel/Carousel";
 
 const LandingPage = () => {
-    return(
+    return (
         <div className="dkLandingPage">
-            <div className="container-fluid">
-                <div className="row text-center">
-                    <div className="col-12">
-                        <h1>Landing Page</h1>
+            <section id="heroSection">
+                <div className="container-fluid g-0">
+                    <div className="row">
+                        <div className="col-12">
+                            <Carousel />
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
-    )
+    );
 };
 
 export default LandingPage;
