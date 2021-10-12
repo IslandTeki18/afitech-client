@@ -2,6 +2,10 @@ import React from "react";
 import "./Carousel.scss";
 
 const Carousel = () => {
+    // TODO: Make more dynamic
+    // TODO: Make Responsive
+    // TODO: Update Carousel Captions
+    // TODO: Add CTA Buttons
     return (
         <div
             id="carouselIndicators"

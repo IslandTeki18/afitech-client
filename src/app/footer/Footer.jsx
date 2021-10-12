@@ -12,6 +12,9 @@ const Footer = () => {
         { name: "Github", link: "www.google.com" },
         { name: "Google+", link: "www.google.com" },
     ];
+
+    // TODO: Make Mobile Responsive
+    // TODO: Add links to footer
     return (
         <footer className="mt-auto bg-dark py-5">
             <div className="container">

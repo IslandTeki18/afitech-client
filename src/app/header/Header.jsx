@@ -3,9 +3,9 @@ import "./Header.scss";
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark py-4">
             <div className="container-fluid">
-                <a className="navbar-brand" href="/">
+                <a className="navbar-brand text-uppercase" href="/">
                     AFI Tech
                 </a>
                 <button
@@ -50,17 +50,26 @@ const Header = () => {
                                 </button>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <a className="dropdown-item" href="/service/one-page">
+                                        <a
+                                            className="dropdown-item"
+                                            href="/services/one-page"
+                                        >
                                             1 Page Web Applications
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="/service/full-stack">
+                                        <a
+                                            className="dropdown-item"
+                                            href="/services/full-stack"
+                                        >
                                             Full Stack Web Applications
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="/service/mobile">
+                                        <a
+                                            className="dropdown-item"
+                                            href="/services/mobile"
+                                        >
                                             Mobile Applications
                                         </a>
                                     </li>
@@ -68,7 +77,10 @@ const Header = () => {
                                         <hr className="dropdown-divider" />
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="/service/other">
+                                        <a
+                                            className="dropdown-item"
+                                            href="/services/other"
+                                        >
                                             Others
                                         </a>
                                     </li>
