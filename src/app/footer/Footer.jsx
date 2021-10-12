@@ -1,100 +1,52 @@
 import React from "react";
 import ListGroup from "../../components/listGroup/ListGroup";
 import ListGroupItem from "../../components/listGroupItem/ListGroupItem";
+import Icon from "../../components/icon/Icon";
 
 const Footer = () => {
-    const categories = ["Home", "Projects", "Services", "About", "Contact"];
+    const menuItems = ["Home", "Projects", "Services", "About", "Contact"];
+    const socialItems = [
+        { name: "Instagram", link: "www.google.com" },
+        { name: "Facebook", link: "www.google.com" },
+        { name: "Twitter", link: "www.google.com" },
+        { name: "Github", link: "www.google.com" },
+        { name: "Google+", link: "www.google.com" },
+    ];
     return (
-        <footer className="fixed-bottom bg-dark py-5">
+        <footer className="mt-auto bg-dark py-5">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-8 text-center">
-                        <h5 className="text-white">
-                            AFI Tech provides quality small to medium web and
-                            mobile applications
-                        </h5>
-                    </div>
-                    <div className="col-md-4 d-flex justify-content-center align-items-center">
-                        <div
-                            className="btn-group"
-                            role="group"
-                            aria-label="Footer Button Group"
-                        >
-                            <button
-                                type="button"
-                                className="btn btn-outline-primary"
-                            >
-                                Contact Us
-                            </button>
-                            <button type="button" className="btn btn-primary">
-                                See our Services
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-                <div className="row">
-                    <div className="col-md-3">
-                        <ListGroup isFlush>
-                            <ListGroupItem
-                                isBold
-                                bgColor="transparent"
-                                color="#fff"
-                            >
-                                Categories
-                            </ListGroupItem>
-                            {categories.map((item) => (
-                                <ListGroupItem
-                                    bgColor="transparent"
-                                    color="#fff"
-                                    isBorder={false}
-                                >
-                                    {item}
-                                </ListGroupItem>
+                    <div className="col-md-3 text-white text-center border-end">
+                        <ListGroup>
+                            <ListGroupItem isBold>Menu</ListGroupItem>
+                            {menuItems.map((item) => (
+                                <ListGroupItem>{item}</ListGroupItem>
                             ))}
                         </ListGroup>
                     </div>
-                    <div className="col-md-3">
-                        <ListGroup isFlush>
-                            <ListGroupItem
-                                isBold
-                                bgColor="transparent"
-                                color="#fff"
-                            >
-                                Information
-                            </ListGroupItem>
-                            {categories.map((item) => (
-                                <ListGroupItem
-                                    bgColor="transparent"
-                                    color="#fff"
-                                    isBorder={false}
-                                >
-                                    {item}
-                                </ListGroupItem>
+                    <div className="col-md-6 text-white text-center">
+                        <h3>AFI TECH</h3>
+                        <p>
+                            We specialize in developing fast and reliant web and
+                            mobile applications for your business or for your
+                            personal requests. We strive to be fast in all
+                            aspects that go into development such as planning,
+                            designing, developing, deploying, and maintaining.
+                        </p>
+                        <h6 className="pt-3">
+                            Made with{" "}
+                            <Icon isSolid icon="heart" size="15" color="red" />{" "}
+                            by Landon McKell
+                        </h6>
+                    </div>
+                    <div className="col-md-3 text-white text-center border-start">
+                        <ListGroup>
+                            <ListGroupItem isBold>Menu</ListGroupItem>
+                            {socialItems.map((item) => (
+                                <ListGroupItem>{item.name}</ListGroupItem>
                             ))}
                         </ListGroup>
                     </div>
-                    <div className="col-md-3">
-                        <ListGroup isFlush>
-                            <ListGroupItem
-                                isBold
-                                bgColor="transparent"
-                                color="#fff"
-                            >
-                                Contact Us
-                            </ListGroupItem>
-                            {categories.map((item) => (
-                                <ListGroupItem
-                                    bgColor="transparent"
-                                    color="#fff"
-                                    isBorder={false}
-                                >
-                                    {item}
-                                </ListGroupItem>
-                            ))}
-                        </ListGroup>
-                    </div>
-                    <div className="col-md-3"></div>
                 </div>
             </div>
         </footer>

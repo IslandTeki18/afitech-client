@@ -7,7 +7,9 @@ function App() {
     return (
         <Router>
             <Header />
-            <Route exact path="/" component={LandingPage} />
+            <main className="flex-shrink-0">
+                <Route exact path="/" component={LandingPage} />
+            </main>
             <Footer />
         </Router>
     );
