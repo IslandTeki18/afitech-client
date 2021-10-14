@@ -5,19 +5,18 @@ import Carousel from "../../components/carousel/Carousel";
 import Icon from "../../components/icon/Icon";
 import ListGroup from "../../components/listGroup/ListGroup";
 import { servicesItems } from "../../utils/serviceItems";
+import ProjectDisplayCard from "../../components/projectDisplayCard/ProjectDisplayCard";
 
 const HomePage = () => {
     const history = useHistory();
+
+    // TODO: Needs Mobile Responsive
+    // TODO: Break sections out
+
     return (
         <div className="dkHomePage">
             <section id="heroSection">
-                <div className="container-fluid g-0">
-                    <div className="row">
-                        <div className="col-12">
-                            <Carousel />
-                        </div>
-                    </div>
-                </div>
+                <Carousel />
             </section>
             <section id="servicesSection">
                 <div className="container my-5">
@@ -77,10 +76,18 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <section>
+            <section id="recentProjectsSection" className="bg-dark py-5">
                 <div className="container">
                     <div className="row">
-                        
+                        <div className="col-md-4 d-flex justify-content-center">
+                            <ProjectDisplayCard />
+                        </div>
+                        <div className="col-md-4 d-flex justify-content-center">
+                            <ProjectDisplayCard />
+                        </div>
+                        <div className="col-md-4 d-flex justify-content-center">
+                            <ProjectDisplayCard />
+                        </div>
                     </div>
                 </div>
             </section>
