@@ -1,11 +1,13 @@
 import React from "react";
 import "./HomePage.scss";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { testimonials, projects } from "../../utils/testData";
 import Carousel from "../../components/carousel/Carousel";
 import Icon from "../../components/icon/Icon";
 import ListGroup from "../../components/listGroup/ListGroup";
 import { servicesItems } from "../../utils/serviceItems";
 import ProjectDisplayCard from "../../components/projectDisplayCard/ProjectDisplayCard";
+import TestimonialCarousel from "../../components/testimonialCarousel/TestimonialCarousel";
 
 const HomePage = () => {
     const history = useHistory();
@@ -79,14 +81,42 @@ const HomePage = () => {
             <section id="recentProjectsSection" className="bg-dark py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4 d-flex justify-content-center">
-                            <ProjectDisplayCard />
+                        {projects.map((project, idx) => (
+                            <div
+                                className="col-md-4 d-flex justify-content-center"
+                                key={idx}
+                            >
+                                <ProjectDisplayCard
+                                    projectImg={project.projectImg}
+                                    imgAlt={project.imgAlt}
+                                    projectTitle={project.projectTitle}
+                                    shortDescription={project.shortDescription}
+                                    link={project.link}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                    <div className="row justify-content-center mt-4">
+                        <div className="col-md-3 text-center">
+                            <Link
+                                className="btn btn-secondary w-50 text-uppercase"
+                                to="/project-list"
+                            >
+                                All Work
+                            </Link>
                         </div>
-                        <div className="col-md-4 d-flex justify-content-center">
-                            <ProjectDisplayCard />
+                    </div>
+                </div>
+            </section>
+            <section id="testimonialSection" className="py-5">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-4">
+                            <h5>our clients</h5>
+                            <h3>What our clients say about us</h3>
                         </div>
-                        <div className="col-md-4 d-flex justify-content-center">
-                            <ProjectDisplayCard />
+                        <div className="col-md-8">
+                            <TestimonialCarousel testimonials={testimonials} />
                         </div>
                     </div>
                 </div>

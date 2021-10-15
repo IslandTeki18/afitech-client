@@ -1,3 +1,18 @@
 .dkProjectDisplayCard {
-    width: 25rem;
+    max-width: 25rem;
+
+    .project-img {
+        max-height: 200px;
+        object-fit: cover;
+    }
+    .line-clamp {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+
+    .information-body {
+        overflow: hidden;
+        max-width: 23rem;
+    }
 }
