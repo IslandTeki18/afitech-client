@@ -20,8 +20,8 @@ const HomePage = () => {
             <section id="heroSection">
                 <Carousel />
             </section>
-            <section id="servicesSection">
-                <div className="container my-5">
+            <section id="servicesSection" className="py-6">
+                <div className="container">
                     <div className="row">
                         <div className="col-md-6">
                             <h5 className="pb-3">our services</h5>
@@ -78,7 +78,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <section id="recentProjectsSection" className="bg-dark py-5">
+            <section id="recentProjectsSection" className="bg-dark py-6">
                 <div className="container">
                     <div className="row">
                         {projects.map((project, idx) => (
@@ -108,7 +108,7 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <section id="testimonialSection" className="py-5">
+            <section id="testimonialSection" className="py-6">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4">
