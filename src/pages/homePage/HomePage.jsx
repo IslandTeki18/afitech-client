@@ -1,13 +1,14 @@
 import React from "react";
 import "./HomePage.scss";
 import { Link, useHistory } from "react-router-dom";
-import { testimonials, projects } from "../../utils/testData";
+import { testimonials, projects, blogDisplay } from "../../utils/testData";
 import Carousel from "../../components/carousel/Carousel";
 import Icon from "../../components/icon/Icon";
 import ListGroup from "../../components/listGroup/ListGroup";
 import { servicesItems } from "../../utils/serviceItems";
 import ProjectDisplayCard from "../../components/projectDisplayCard/ProjectDisplayCard";
 import TestimonialCarousel from "../../components/testimonialCarousel/TestimonialCarousel";
+import BlogDisplayCard from "../../components/blogDisplayCard/BlogDisplayCard";
 
 const HomePage = () => {
     const history = useHistory();
@@ -117,6 +118,33 @@ const HomePage = () => {
                         </div>
                         <div className="col-md-8">
                             <TestimonialCarousel testimonials={testimonials} />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="blogSection" className="bg-dark py-6">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-6 text-white">
+                            <h1 className='display-4'>What's New?</h1>
+                            <Link
+                                to="/blog-list"
+                                className="btn btn-secondary mt-5 text-uppercase"
+                            >
+                                All Posts
+                            </Link>
+                        </div>
+                        <div className="col-md-6">
+                            {blogDisplay.map((item, idx) => (
+                                <div className="py-2">
+                                    <BlogDisplayCard
+                                        img={item.image}
+                                        imgAlt={`blog-${idx}`}
+                                        title={item.title}
+                                        description={item.shortdescription}
+                                    />
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
