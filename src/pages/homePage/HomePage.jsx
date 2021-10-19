@@ -125,8 +125,8 @@ const HomePage = () => {
             <section id="blogSection" className="bg-dark py-6">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 text-white">
-                            <h1 className='display-4'>What's New?</h1>
+                        <div className="col-md-4 text-white">
+                            <h1 className="display-4">What's New?</h1>
                             <Link
                                 to="/blog-list"
                                 className="btn btn-secondary mt-5 text-uppercase"
@@ -134,17 +134,39 @@ const HomePage = () => {
                                 All Posts
                             </Link>
                         </div>
-                        <div className="col-md-6">
+                        <div className="col-md-8">
                             {blogDisplay.map((item, idx) => (
-                                <div className="py-2">
+                                <div className="py-4">
                                     <BlogDisplayCard
                                         img={item.image}
                                         imgAlt={`blog-${idx}`}
                                         title={item.title}
-                                        description={item.shortdescription}
+                                        link={item.link}
+                                        datePublished={item.datePublished}
                                     />
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="connectSection" className="py-6">
+                <div className="container py-6">
+                    <div className="row d-flex align-items-center">
+                        <div className="col-md-8">
+                            <h1 className="display-1 text-uppercase">
+                                Let's work together!
+                            </h1>
+                        </div>
+                        <div className="col-md-4">
+                            <Link to="/contact" className="btn btn-link">
+                                <Icon
+                                    isSolid
+                                    icon="long-arrow-alt-right"
+                                    color="#000000"
+                                    size="60"
+                                />
+                            </Link>
                         </div>
                     </div>
                 </div>

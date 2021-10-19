@@ -56,22 +56,19 @@ export const projects = [
 export const blogDisplay = [
     {
         title: "Dummy Title",
-        shortdescription:
-            "Have you ever wondered what developers do with dummy data? Why, we test the functionality of our code with it. Seems simple but coming up with content on the fly isn't.",
+        datePublished: "Sept. 20, 2021",
         image: "https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80",
         link: "/blog/1",
     },
     {
         title: "Reactjs, Bootstrap 5, SCSS, and Redux",
-        shortdescription:
-            "I think in my hublest opinion that reactjs, bootstrap 5, redux, and scss is mostly, if not all, what you need to build a website. It's simple, straight forward and teams are constantly updating it so you know that the live of these dependacies will last a while.",
+        datePublished: "Aug. 20, 2021",
         image: "https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80",
         link: "/blog/2",
     },
     {
         title: "NodeJS, Express, MongoDB or MySQL",
-        shortdescription:
-            "Backend stacks can be confusing but i think choosing the one YOU choose to be familiar with is the best choice. Everyone has their opinions on what is best and whats not but I think that if the server is set up right, using best practices, you'll be able to run any kind of site to some scale.",
+        datePublished: "July. 20, 2021",
         image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1472&q=80",
         link: "/blog/3",
     },
