@@ -13,7 +13,7 @@ import BlogDisplayCard from "../../components/blogDisplayCard/BlogDisplayCard";
 const HomePage = () => {
     const history = useHistory();
 
-    // TODO: Needs Mobile Responsive
+    // TODO: Needs Mobile Responsive (xlg desktop, lg laptop, tablet, mobile)
     // TODO: Break sections out
 
     return (
@@ -42,7 +42,10 @@ const HomePage = () => {
                                 development, deployment, and maintence, we keep
                                 our code base scalable, secure, and readable.
                             </h4>
-                            <button className="btn btn-primary">
+                            <button
+                                className="btn btn-primary"
+                                onClick={() => history.push("/services")}
+                            >
                                 all services
                             </button>
                         </div>
@@ -101,7 +104,7 @@ const HomePage = () => {
                         <div className="col-md-3 text-center">
                             <Link
                                 className="btn btn-secondary w-50 text-uppercase"
-                                to="/project-list"
+                                to="/projects"
                             >
                                 All Work
                             </Link>

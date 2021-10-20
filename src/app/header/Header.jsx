@@ -52,6 +52,14 @@ const Header = () => {
                                     <li>
                                         <a
                                             className="dropdown-item"
+                                            href="/services"
+                                        >
+                                            All Services
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            className="dropdown-item"
                                             href="/services/one-page"
                                         >
                                             1 Page Web Applications
