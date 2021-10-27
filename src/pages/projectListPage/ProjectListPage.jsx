@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import ProjectListCard from "../../components/projectListCard/ProjectListCard";
 import { projectList } from "../../utils/testData";
 
@@ -36,12 +36,13 @@ const ProjectListPage = () => {
                 <div className="container">
                     <div className="row">
                         {projectList.map((project) => (
-                            <div className="col-md-4">
+                            <div className="col-md-12">
                                 <ProjectListCard
                                     image={project.image}
                                     title={project.title}
                                     altImage={project.altImage}
                                     projectType={project.projectType}
+                                    link={project.link}
                                 />
                             </div>
                         ))}

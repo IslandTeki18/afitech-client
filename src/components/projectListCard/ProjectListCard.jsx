@@ -1,14 +1,19 @@
 import React from "react";
 import "./ProjectListCard.scss";
+import Icon from "../icon/Icon";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const ProjectListCard = (props) => {
     return (
-        <div className="dkProjectListCard card bg-dark text-white border-0">
-            <img src={props.image} className="card-img" alt={props.altImage} />
-            <div className="card-img-overlay d-flex justify-content-between align-items-center">
-                <h3 className="card-title">{props.title}</h3>
-                <h5 className="card-text">{props.projectType}</h5>
+        <div className="dkProjectListCard">
+            <img src={props.image} alt={props.altImage} className="img-fluid" />
+            <div className="card-overlay">
+                <h3>{props.title}</h3>
+                <h6>{props.projectType}</h6>
+                <Link className="btn btn-secondary">
+                    <Icon isSolid icon="plus" color="#ffffff" size="20" />
+                </Link>
             </div>
         </div>
     );

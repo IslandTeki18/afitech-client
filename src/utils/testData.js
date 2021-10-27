@@ -80,17 +80,20 @@ export const projectList = [
         altImage: "platoes game store",
         projectType: "1 Page Web App",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
+        link: "project/1",
     },
     {
         title: "Joe's Electronics",
         altImage: "joes electronics",
         projectType: "Full Stack",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
+        link: "project/2",
     },
     {
         title: "Jane's Dough-nuts",
         altImage: "janes donuts",
         projectType: "Full Stack",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
+        link: "project/3",
     },
 ];
