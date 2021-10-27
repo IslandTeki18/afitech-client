@@ -36,7 +36,7 @@ const ProjectListPage = () => {
                 <div className="container">
                     <div className="row">
                         {projectList.map((project) => (
-                            <div className="col-md-12">
+                            <div className="col-md-4">
                                 <ProjectListCard
                                     image={project.image}
                                     title={project.title}
