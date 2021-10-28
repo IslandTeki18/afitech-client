@@ -6,31 +6,14 @@ import { projectList } from "../../utils/testData";
 const ProjectListPage = () => {
     return (
         <div className="dkProjectListPage">
-            <section id="projectNavSection" className="py-5">
-                <ul className="nav justify-content-center">
-                    <li className="nav-item">
-                        <button className="btn nav-link">all projects</button>
-                    </li>
-                    <li className="nav-item">
-                        <button className="btn nav-link">
-                            one page websites
-                        </button>
-                    </li>
-                    <li className="nav-item">
-                        <button className="btn nav-link">
-                            full stack websites
-                        </button>
-                    </li>
-                    <li className="nav-item">
-                        <button
-                            className="btn nav-link disabled"
-                            tabindex="-1"
-                            aria-disabled="true"
-                        >
-                            mobile apps
-                        </button>
-                    </li>
-                </ul>
+            <section id="pageTitleSection">
+                <div className="container pt-3">
+                    <div className="row">
+                        <div className="col text-center">
+                            <h1>Project List</h1>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="projectListSection" className="py-5">
                 <div className="container">

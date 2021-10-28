@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const ProjectListCard = (props) => {
     return (
-        <div className="dkProjectListCard m-3">
+        <div className="dkProjectListCard mx-md-2 my-md-3">
             <img src={props.image} alt={props.altImage} className="img-fluid" />
             <div className="card-overlay text-white">
                 <h3>{props.title}</h3>
