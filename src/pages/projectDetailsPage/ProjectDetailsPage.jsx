@@ -3,6 +3,8 @@ import "./ProjectDetailsPage.scss";
 import Carousel from "../../components/carousel/Carousel";
 
 const ProjectDetailsPage = () => {
+    // Redux Project Details API Call
+
     return (
         <div className="dkProjectDetailsPage">
             <section id="pageHeaderSection" className="my-5">
