@@ -97,3 +97,13 @@ export const projectList = [
         link: "project/3",
     },
 ];
+
+export const serviceList = [
+    {
+        title: "Service Title",
+        description:
+            "Project Description That should be no longer than 2 sentances long. This is also depend greatly on the designer of the project",
+        img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        projectLink: "service/service-name",
+    },
+];
