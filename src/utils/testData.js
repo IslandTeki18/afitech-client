@@ -100,10 +100,45 @@ export const projectList = [
 
 export const serviceList = [
     {
-        title: "Service Title",
+        title: "Full Stack Website",
         description:
             "Project Description That should be no longer than 2 sentances long. This is also depend greatly on the designer of the project",
+        serviceFeatures: [
+            "Modern Design Process",
+            "Front and Back End Development",
+            "Custom Built CMS",
+            "Uses Bootstrap, Tailwind CSS, Semantic UI",
+        ],
         img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        projectLink: "service/service-name",
+        projectLink: "service/full-stack-service",
+        isActive: true,
+    },
+    {
+        title: "One Page Website",
+        description:
+            "Project Description That should be no longer than 2 sentances long. This is also depend greatly on the designer of the project",
+        serviceFeatures: [
+            "Modern UX/UI Section Designs",
+            "Front and Backend Development",
+            "Total Process: 1 - 3 Days",
+            "Uses Bootstrap, Tailwind CSS, Semantic UI for speed of development",
+        ],
+        img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        projectLink: "service/one-page-service",
+        isActive: true,
+    },
+    {
+        title: "Mobile Application",
+        description:
+            "Project Description That should be no longer than 2 sentances long. This is also depend greatly on the designer of the project",
+        serviceFeatures: [
+            "Modern Design Process",
+            "Front and Back End Development",
+            "Custom Built CMS App",
+            "Cross Mobile Compatitable (iOS & Andriod)",
+        ],
+        img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        projectLink: "service/mobile-app-service",
+        isActive: false,
     },
 ];
