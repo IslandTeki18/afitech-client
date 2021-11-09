@@ -6,6 +6,7 @@ import ProjectListPage from "./pages/projectListPage/ProjectListPage";
 import ContactPage from "./pages/contactPage/ContactPage";
 import ProjectDetailsPage from "./pages/projectDetailsPage/ProjectDetailsPage";
 import ServiceListPage from "./pages/serviceListPage/ServiceListPage";
+import ServiceDetailsPage from "./pages/serviceDetailsPage/ServiceDetailsPage";
 
 function App() {
     return (
@@ -16,7 +17,11 @@ function App() {
                 <Route path="/projects" component={ProjectListPage} />
                 <Route path="/contact" component={ContactPage} />
                 <Route path="/project/:id" component={ProjectDetailsPage} />
-                <Route path="/services" component={ServiceListPage} />
+                <Route
+                    path="/services/:service"
+                    component={ServiceDetailsPage}
+                />
+                <Route exact path="/services" component={ServiceListPage} />
             </main>
             <Footer />
         </Router>

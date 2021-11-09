@@ -110,7 +110,7 @@ export const serviceList = [
             "Uses Bootstrap, Tailwind CSS, Semantic UI",
         ],
         img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        projectLink: "service/full-stack-service",
+        projectLink: "services/full-stack",
         isActive: true,
     },
     {
@@ -124,7 +124,7 @@ export const serviceList = [
             "Uses Bootstrap, Tailwind CSS, Semantic UI for speed of development",
         ],
         img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        projectLink: "service/one-page-service",
+        projectLink: "services/one-page",
         isActive: true,
     },
     {
@@ -138,7 +138,26 @@ export const serviceList = [
             "Cross Mobile Compatitable (iOS & Andriod)",
         ],
         img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
-        projectLink: "service/mobile-app-service",
+        projectLink: "services/mobile-app",
         isActive: false,
+    },
+];
+
+export const serviceFeatureInfo = [
+    {
+        title: "Feature List One",
+        desc: "Deep also brought days sea fish life seas, yielding. Over appear likeness lights heaven gathered third stars cattle replenish firmament place land without earth green creature above winged forth waters said the under set fish called ea fish life seas, yielding. s sea fish ver appear likeness lights heaven gathered third stars cattle replenish firmament",
+    },
+    {
+        title: "Feature List Two",
+        desc: "Deep also brought days sea fish life seas, yielding. Over appear likeness lights heaven gathered third stars cattle replenish firmament place land without earth green creature above winged forth waters said the under set fish called",
+    },
+    {
+        title: "Feature List Three",
+        desc: "Deep also brought days sea fish life seas, yielding. Over appear likeness lights heaven gathered third stars cattle",
+    },
+    {
+        title: "Feature List Four",
+        desc: "Deep also brought days sea fish life seas, yielding. Over appear likeness lights heaven gathered third stars cattle replenish firmament place land without earth green creature above winged forth waters said the under set fish called",
     },
 ];

@@ -76,7 +76,7 @@ const Header = () => {
                                     <li>
                                         <a
                                             className="dropdown-item"
-                                            href="/services/mobile"
+                                            href="/services/mobile-app"
                                         >
                                             Mobile Applications
                                         </a>
@@ -86,7 +86,7 @@ const Header = () => {
                                     </li>
                                     <li>
                                         <a
-                                            className="dropdown-item"
+                                            className="dropdown-item disabled"
                                             href="/services/other"
                                         >
                                             Others
