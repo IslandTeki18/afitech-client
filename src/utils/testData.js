@@ -78,21 +78,24 @@ export const projectList = [
     {
         title: "Platoe's Game Store",
         altImage: "platoes game store",
-        projectType: "1 Page Web App",
+        projectDisplayType: "1 Page Web App",
+        projectType: "one-page",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
         link: "project/1",
     },
     {
         title: "Joe's Electronics",
         altImage: "joes electronics",
-        projectType: "Full Stack",
+        projectDisplayType: "Full Stack",
+        projectType: "full-stack",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
         link: "project/2",
     },
     {
         title: "Jane's Dough-nuts",
         altImage: "janes donuts",
-        projectType: "Full Stack",
+        projectDisplayType: "Full Stack",
+        projectType: "full-stack",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
         link: "project/3",
     },
@@ -112,9 +115,10 @@ export const serviceList = [
         img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         projectLink: "services/full-stack",
         isActive: true,
+        serviceType: "full-stack",
     },
     {
-        title: "One Page Website",
+        title: "1 Page Website",
         description:
             "Project Description That should be no longer than 2 sentances long. This is also depend greatly on the designer of the project",
         serviceFeatures: [
@@ -126,6 +130,7 @@ export const serviceList = [
         img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         projectLink: "services/one-page",
         isActive: true,
+        serviceType: "one-page",
     },
     {
         title: "Mobile Application",
@@ -140,6 +145,7 @@ export const serviceList = [
         img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
         projectLink: "services/mobile-app",
         isActive: false,
+        serviceType: "mobile-app",
     },
 ];
 

@@ -1,8 +1,12 @@
 import React from "react";
 import "./ServiceDetailsPage.scss";
-import { serviceFeatureInfo } from "../../utils/testData";
+import { useParams } from "react-router-dom";
+import { serviceFeatureInfo, projectList } from "../../utils/testData";
+import ProjectListCard from "../../components/projectListCard/ProjectListCard";
 
 const ServiceDetailsPage = () => {
+    const params = useParams();
+    console.log(params);
     // Redux Service Details Call
 
     function serviceFeatureCards() {
@@ -16,6 +20,26 @@ const ServiceDetailsPage = () => {
                         </div>
                     ))}
                 </div>
+            </>
+        );
+    }
+
+    function renderProjectListCards() {
+        return (
+            <>
+                {projectList
+                    .filter((project) => project.projectType === params.service)
+                    .map((item, idx) => (
+                        <div className="col-sm-12 col-md-4" key={idx}>
+                            <ProjectListCard
+                                title={item.title}
+                                image={item.image}
+                                altImage={item.altImage}
+                                projectType={item.projectDisplayType}
+                                link={item.link}
+                            />
+                        </div>
+                    ))}
             </>
         );
     }
@@ -59,6 +83,11 @@ const ServiceDetailsPage = () => {
                             {serviceFeatureCards()}
                         </div>
                     </div>
+                </div>
+            </section>
+            <section id="relatedProjectsSection">
+                <div className="container-fluid g-0">
+                    <div className="row">{renderProjectListCards()}</div>
                 </div>
             </section>
         </div>

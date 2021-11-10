@@ -24,7 +24,7 @@ const ProjectListPage = () => {
                                     image={project.image}
                                     title={project.title}
                                     altImage={project.altImage}
-                                    projectType={project.projectType}
+                                    projectType={project.projectDisplayType}
                                     link={project.link}
                                 />
                             </div>
