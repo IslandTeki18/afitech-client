@@ -7,6 +7,7 @@ import ContactPage from "./pages/contactPage/ContactPage";
 import ProjectDetailsPage from "./pages/projectDetailsPage/ProjectDetailsPage";
 import ServiceListPage from "./pages/serviceListPage/ServiceListPage";
 import ServiceDetailsPage from "./pages/serviceDetailsPage/ServiceDetailsPage";
+import AboutPage from "./pages/aboutPage/AboutPage";
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     component={ServiceDetailsPage}
                 />
                 <Route exact path="/services" component={ServiceListPage} />
+                <Route path="/about" component={AboutPage} />
             </main>
             <Footer />
         </Router>
