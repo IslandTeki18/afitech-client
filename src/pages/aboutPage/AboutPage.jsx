@@ -1,4 +1,5 @@
 import React from "react";
+import TeamMemberCard from "../../components/teamMemberCard/TeamMemberCard";
 import "./AboutPage.scss";
 
 const AboutPage = () => {
@@ -30,7 +31,18 @@ const AboutPage = () => {
                 </div>
             </section>
             <section id="meetTheTeamSection">
-                
+                <div className="container pt-5 pb-3">
+                    <h1 className="display-3">Meet the team</h1>
+                    <div className="row">
+                        <div className="col-md-4">
+                            <TeamMemberCard
+                                name="Landon McKell"
+                                position="CTO / Developer"
+                                profileImg="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80"
+                            />
+                        </div>
+                    </div>
+                </div>
             </section>
             <section id="callToActionSection"></section>
             <section id="contactFormSection"></section>
