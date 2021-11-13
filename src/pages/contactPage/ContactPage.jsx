@@ -12,7 +12,7 @@ const ContactPage = () => {
                             <div className="card-body text-center">
                                 <Icon
                                     icon="marker"
-                                    isSolid
+                                    iconStyle="fas"
                                     size="30"
                                     color="red"
                                     marginBottom="15"
@@ -31,7 +31,7 @@ const ContactPage = () => {
                             <div className="card-body text-center">
                                 <Icon
                                     icon="envelope"
-                                    isSolid
+                                    iconStyle="fas"
                                     size="30"
                                     color="red"
                                     marginBottom="15"
@@ -47,7 +47,7 @@ const ContactPage = () => {
                             <div className="card-body text-center">
                                 <Icon
                                     icon="phone"
-                                    isSolid
+                                    iconStyle="fas"
                                     size="30"
                                     color="red"
                                     marginBottom="15"

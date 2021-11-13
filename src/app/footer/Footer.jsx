@@ -38,7 +38,7 @@ const Footer = () => {
                         </p>
                         <h6 className="pt-3">
                             Made with{" "}
-                            <Icon isSolid icon="heart" size="15" color="red" />{" "}
+                            <Icon iconStyle="fas" icon="heart" size="15" color="red" />{" "}
                             by Landon McKell
                         </h6>
                     </div>

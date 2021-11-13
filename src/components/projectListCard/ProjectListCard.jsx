@@ -12,7 +12,7 @@ const ProjectListCard = (props) => {
                 <h3>{props.title}</h3>
                 <h6>{props.projectType}</h6>
                 <Link className="btn btn-secondary" to={props.link}>
-                    <Icon isSolid icon="plus" color="#ffffff" size="20" />
+                    <Icon iconStyle="fas" icon="plus" color="#ffffff" size="20" />
                 </Link>
             </div>
         </div>

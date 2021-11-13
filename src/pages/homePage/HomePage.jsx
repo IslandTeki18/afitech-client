@@ -30,7 +30,7 @@ const HomePage = () => {
                                 We create everything from scratch with the
                                 latest technologoy that will be around for years{" "}
                                 <Icon
-                                    isSolid
+                                    iconStyle="fas"
                                     color="red"
                                     size="30"
                                     icon="fire"
@@ -66,7 +66,7 @@ const HomePage = () => {
                                             {item.name}
                                             <Icon
                                                 icon="long-arrow-alt-right"
-                                                isSolid
+                                                iconStyle="fas"
                                                 color={
                                                     item.isDisabled
                                                         ? "lightgrey"
@@ -164,7 +164,7 @@ const HomePage = () => {
                         <div className="col-md-4">
                             <Link to="/contact" className="btn btn-link">
                                 <Icon
-                                    isSolid
+                                    iconStyle="fas"
                                     icon="long-arrow-alt-right"
                                     color="#000000"
                                     size="60"

@@ -57,7 +57,7 @@ const TestimonialCarousel = (props) => {
                 data-bs-slide="prev"
             >
                 <Icon
-                    isSolid
+                    iconStyle="fas"
                     icon="long-arrow-alt-left"
                     color="#000000"
                     size="40"
@@ -71,7 +71,7 @@ const TestimonialCarousel = (props) => {
                 data-bs-slide="next"
             >
                 <Icon
-                    isSolid
+                    iconStyle="fas"
                     icon="long-arrow-alt-right"
                     color="#000000"
                     size="40"

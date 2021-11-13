@@ -29,7 +29,7 @@ const BlogDisplayCard = (props) => {
                         >
                             read more
                             <Icon
-                                isSolid
+                                iconStyle="fas"
                                 icon="long-arrow-alt-right"
                                 color="#ffffff"
                                 size="30"

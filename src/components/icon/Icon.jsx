@@ -2,11 +2,23 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Icon = (props) => {
+    function renderFontAwesomeStyle(style) {
+        switch (style) {
+            case "fas":
+                return "fas";
+            case "far":
+                return "far";
+            case "fab":
+                return "fab";
+            default:
+                return "fas";
+        }
+    }
     return (
         <i
-            className={`${
-                props.isSolid ? "fas" : props.isRegular ? "far" : "fas"
-            } fa-${props.icon ? `${props.icon}` : "exclamation-circle"}`}
+            className={`${renderFontAwesomeStyle(props.iconStyle)} fa-${
+                props.icon ? `${props.icon}` : "exclamation-circle"
+            }`}
             style={{
                 color: `${props.color ? `${props.color}` : "#ffffff"}`,
                 fontSize: `${props.size ? `${props.size}px` : "12px"}`,
@@ -26,8 +38,7 @@ const Icon = (props) => {
 };
 
 Icon.propTypes = {
-    isSolid: PropTypes.bool.isRequired,
-    isRegular: PropTypes.bool.isRequired,
+    iconStyle: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     color: PropTypes.string,
     size: PropTypes.string,
