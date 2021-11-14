@@ -1,32 +1,70 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import LabelInput from "../labelInput/LabelInput";
 
 const ContactForm = (props) => {
-    const [test, setTest] = useState("");
-    console.log(test);
+    function callBackData() {
+        props.collectData(
+            props.formData.firstName,
+            props.formData.lastName,
+            props.formData.phone,
+            props.formData.email,
+            props.formData.subject,
+            props.formData.message
+        );
+    }
+
     return (
-        <form className="row g-3">
+        <form className="row g-3" onSubmit={callBackData}>
             <div className="col-md-6">
                 <LabelInput
                     placeholder="First name"
                     type="text"
                     callback={(val) => {
-                        setTest(val);
+                        console.log(val);
+                        props.formData.firstName(val);
                     }}
                 />
             </div>
             <div className="col-md-6">
-                <LabelInput placeholder="Last name" type="text" />
+                <LabelInput
+                    placeholder="Last name"
+                    type="text"
+                    callback={(val) => {
+                        console.log(val);
+                        props.formData.lastName(val);
+                    }}
+                />
             </div>
             <div className="col-md-6">
-                <LabelInput placeholder="Phone number" type="phone" />
+                <LabelInput
+                    placeholder="Phone number"
+                    type="phone"
+                    callback={(val) => {
+                        console.log(val);
+                        props.formData.phone(val);
+                    }}
+                />
             </div>
             <div className="col-md-6">
-                <LabelInput placeholder="Subject" type="text" />
+                <LabelInput
+                    placeholder="Subject"
+                    type="text"
+                    callback={(val) => {
+                        console.log(val);
+                        props.formData.subject(val);
+                    }}
+                />
             </div>
             <div className="col-md-12">
-                <LabelInput placeholder="Email Address" type="email" />
+                <LabelInput
+                    placeholder="Email Address"
+                    type="email"
+                    callback={(val) => {
+                        console.log(val);
+                        props.formData.email(val);
+                    }}
+                />
             </div>
             <div className="col-md-12">
                 <textarea
@@ -34,6 +72,10 @@ const ContactForm = (props) => {
                     aria-label="textarea"
                     rows={3}
                     placeholder="Leave me a message"
+                    onChange={(e) => {
+                        console.log(e.target.value);
+                        props.formData.message(e.target.value);
+                    }}
                 ></textarea>
             </div>
             <div className="col-12">
@@ -45,6 +87,9 @@ const ContactForm = (props) => {
     );
 };
 
-ContactForm.propTypes = {};
+ContactForm.propTypes = {
+    collectData: PropTypes.func,
+    formData: PropTypes.object,
+};
 
 export default ContactForm;

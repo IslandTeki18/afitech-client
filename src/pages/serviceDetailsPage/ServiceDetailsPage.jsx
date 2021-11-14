@@ -6,7 +6,6 @@ import ProjectListCard from "../../components/projectListCard/ProjectListCard";
 
 const ServiceDetailsPage = () => {
     const params = useParams();
-    console.log(params);
     // Redux Service Details Call
 
     function serviceFeatureCards() {
