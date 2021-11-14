@@ -5,6 +5,7 @@ import Icon from "../icon/Icon";
 
 const TeamMemberCard = (props) => {
     // TODO: Find way to store this information and bring into component
+    // TODO: Make more robust and dynamic
     let socialMediaLinks = [
         {
             link: props.github,
@@ -30,17 +31,19 @@ const TeamMemberCard = (props) => {
         return (
             <>
                 {socialMediaLinks.map((item) => (
-                    <div className="col-md-4 d-flex justify-content-center flex-column text-center">
+                    <div
+                        className="col-md-4 d-flex justify-content-center flex-column text-center"
+                        key={item.name}
+                    >
                         <a
                             href={item.link}
-                            referrerPolicy="no-referrer"
                             rel="noreferrer noopener"
                             target="_blank"
                         >
                             <Icon
                                 iconStyle={item.iconType}
                                 icon={item.icon}
-                                size={40}
+                                size="40"
                                 color="#3d3d3d"
                             />
                         </a>

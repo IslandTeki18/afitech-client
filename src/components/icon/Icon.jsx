@@ -41,11 +41,11 @@ Icon.propTypes = {
     iconStyle: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
     color: PropTypes.string,
-    size: PropTypes.string,
-    marginTop: PropTypes.string,
-    marginBottom: PropTypes.string,
-    marginLeft: PropTypes.string,
-    marginRight: PropTypes.string,
+    size: PropTypes.string || PropTypes.number,
+    marginTop: PropTypes.string || PropTypes.number,
+    marginBottom: PropTypes.string || PropTypes.number,
+    marginLeft: PropTypes.string || PropTypes.number,
+    marginRight: PropTypes.string || PropTypes.number,
 };
 
 export default Icon;

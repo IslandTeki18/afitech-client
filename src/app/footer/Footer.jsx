@@ -2,6 +2,7 @@ import React from "react";
 import ListGroup from "../../components/listGroup/ListGroup";
 import ListGroupItem from "../../components/listGroupItem/ListGroupItem";
 import Icon from "../../components/icon/Icon";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     const menuItems = ["Home", "Projects", "Services", "About", "Contact"];
@@ -22,8 +23,10 @@ const Footer = () => {
                     <div className="col-md-3 text-white text-center border-end">
                         <ListGroup>
                             <ListGroupItem isBold>Menu</ListGroupItem>
-                            {menuItems.map((item) => (
-                                <ListGroupItem>{item}</ListGroupItem>
+                            {menuItems.map((item, idx) => (
+                                <Link to="/" key={idx}>
+                                    <ListGroupItem>{item}</ListGroupItem>
+                                </Link>
                             ))}
                         </ListGroup>
                     </div>
@@ -38,15 +41,27 @@ const Footer = () => {
                         </p>
                         <h6 className="pt-3">
                             Made with{" "}
-                            <Icon iconStyle="fas" icon="heart" size="15" color="red" />{" "}
+                            <Icon
+                                iconStyle="fas"
+                                icon="heart"
+                                size="15"
+                                color="red"
+                            />{" "}
                             by Landon McKell
                         </h6>
                     </div>
                     <div className="col-md-3 text-white text-center border-start">
                         <ListGroup>
-                            <ListGroupItem isBold>Menu</ListGroupItem>
+                            <ListGroupItem isBold>Social Media</ListGroupItem>
                             {socialItems.map((item) => (
-                                <ListGroupItem>{item.name}</ListGroupItem>
+                                <a
+                                    href={item.link}
+                                    rel="noreferrer noopener"
+                                    target="_blank"
+                                    key={item.name}
+                                >
+                                    <ListGroupItem>{item.name}</ListGroupItem>
+                                </a>
                             ))}
                         </ListGroup>
                     </div>
