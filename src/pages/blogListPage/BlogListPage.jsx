@@ -1,16 +1,47 @@
 import React from "react";
 import "./BlogListPage.scss";
+import BlogListCard from "../../components/blogListCard/BlogListCard";
+import { blogTags } from "../../utils/testData";
 
 const BlogListPage = () => {
+
+    // TODO: Make Blog Test Data
     function renderBlogListCards() {
         return (
-            <>
-                {}
-            </>
-        )
+            <div className="row">
+                <div className="col-12 my-2">
+                    <BlogListCard />
+                </div>
+                <div className="col-12 my-2">
+                    <BlogListCard />
+                </div>
+                <div className="col-12 my-2">
+                    <BlogListCard />
+                </div>
+                <div className="col-12 my-2">
+                    <BlogListCard />
+                </div>
+                <div className="col-12 my-2">
+                    <BlogListCard />
+                </div>
+                <div className="col-12 my-2">
+                    <BlogListCard />
+                </div>
+            </div>
+        );
     }
     function renderBlogPostTags() {
-        return;
+        return (
+            <div className="row">
+                {blogTags.map((item) => (
+                    <div className="col p-2" key={item.id}>
+                        <button className="btn btn-secondary">
+                            {item.title}
+                        </button>
+                    </div>
+                ))}
+            </div>
+        );
     }
     return (
         <div className="dkBlogListPage">
@@ -26,12 +57,10 @@ const BlogListPage = () => {
             <section id="blogListSection" className="py-2">
                 <div className="container">
                     <div className="row g-2">
-                        <div className="col-md-9">
-
-                        </div>
+                        <div className="col-md-9">{renderBlogListCards()}</div>
                         <div className="col-md-3 ms-auto">
                             <aside className="sidebar">
-                                <div className="card mb-4">
+                                <div className="card card-aside mb-4">
                                     <div className="card-body">
                                         <h4>About</h4>
                                         <p>
@@ -44,7 +73,7 @@ const BlogListPage = () => {
                                 </div>
                             </aside>
                             <aside className="sidebar sidebar-sticky">
-                                <div className="card mb-3">
+                                <div className="card card-aside mb-3">
                                     <h4>Tags</h4>
                                     {renderBlogPostTags()}
                                 </div>

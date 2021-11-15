@@ -168,3 +168,39 @@ export const serviceFeatureInfo = [
     },
 ];
 
+// Blog Mock Schemas
+export const blogTags = [
+    {
+        id: 1,
+        title: "React",
+        description:
+            "React is a lightweight javascript library that's often confused for a javascript framework.",
+        slug: "BLG-JSX",
+        isPublished: true,
+        createdOn: "Sept. 13, 2021",
+        lastModifiedOn: "Sept. 13, 2021",
+        publishedOn: "Sept. 13, 2021",
+    },
+    {
+        id: 2,
+        title: "Typescript",
+        description:
+            "Typescript is a superset for Javascript.",
+        slug: "BLG-TSX",
+        isPublished: true,
+        createdOn: "Sept. 13, 2021",
+        lastModifiedOn: "Sept. 13, 2021",
+        publishedOn: "Sept. 13, 2021",
+    },
+    {
+        id: 3,
+        title: "Bootstrap",
+        description:
+            "Bootstrap is a UI Framework that makes building websites easy",
+        slug: "BLG-BTSP",
+        isPublished: true,
+        createdOn: "Sept. 13, 2021",
+        lastModifiedOn: "Sept. 13, 2021",
+        publishedOn: "Sept. 13, 2021",
+    },
+];
