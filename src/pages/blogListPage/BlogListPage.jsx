@@ -4,13 +4,12 @@ import BlogListCard from "../../components/blogListCard/BlogListCard";
 import { blogTags } from "../../utils/testData";
 
 const BlogListPage = () => {
-
     // TODO: Make Blog Test Data
     function renderBlogListCards() {
         return (
             <div className="row">
                 <div className="col-12 my-2">
-                    <BlogListCard />
+                    <BlogListCard blogLink="/1" />
                 </div>
                 <div className="col-12 my-2">
                     <BlogListCard />

@@ -1,5 +1,6 @@
 import React from "react";
 import "./BlogListCard.scss";
+import { Link } from "react-router-dom";
 
 const BlogListCard = (props) => {
     // TODO: Make dynamic and reuseable
@@ -14,9 +15,12 @@ const BlogListCard = (props) => {
                         This is a short description of the blog post. This is
                         only meant to be 2 to 3 lines.
                     </p>
-                    <button className="btn btn-link text-left">
+                    <Link
+                        to={props.blogLink}
+                        className="btn btn-link text-left"
+                    >
                         continue reading
-                    </button>
+                    </Link>
                 </div>
                 <div className="col-md-5 d-none d-md-block">
                     <img
