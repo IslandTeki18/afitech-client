@@ -184,8 +184,7 @@ export const blogTags = [
     {
         id: 2,
         title: "Typescript",
-        description:
-            "Typescript is a superset for Javascript.",
+        description: "Typescript is a superset for Javascript.",
         slug: "BLG-TSX",
         isPublished: true,
         createdOn: "Sept. 13, 2021",
@@ -202,5 +201,44 @@ export const blogTags = [
         createdOn: "Sept. 13, 2021",
         lastModifiedOn: "Sept. 13, 2021",
         publishedOn: "Sept. 13, 2021",
+    },
+];
+
+export const blogList = [
+    {
+        id: 10,
+        title: "Learning ReactJS",
+        publishedAt: "Nov. 15, 2021",
+        type: "ReactJS",
+        description:
+            "I like to compartmentalize everything and thats why I fell in love with the idea of reactjs. But Reactjs is so much more than you think.",
+        img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        isPublished: true,
+        tags: ["ReactJS"],
+        slug: "RJS-001",
+    },
+    {
+        id: 11,
+        title: "Project Base Learning",
+        publishedAt: "Nov. 16, 2021",
+        type: "Web Development",
+        description:
+            "Why is project based learning so important to developers in all stages? Not just junior developers, but seniors too? It forces you to apply concepts used in real world problems.",
+        img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        isPublished: true,
+        tags: ["Technology"],
+        slug: "OTH-002",
+    },
+    {
+        id: 12,
+        title: "Building Medium to Large Web Apps",
+        publishedAt: "Nov. 15, 2021",
+        type: "Web Development",
+        description:
+            "When building medium to large web applications, having all of your frontend and backend and admin code in the same repo. Here's why...",
+        img: "https://images.unsplash.com/photo-1503252947848-7338d3f92f31?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Y29kaW5nfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        isPublished: true,
+        tag: ["Technology"],
+        slug: "OTH-001",
     },
 ];
