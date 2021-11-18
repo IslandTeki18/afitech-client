@@ -81,29 +81,43 @@ const Header = () => {
                                             Mobile Applications
                                         </a>
                                     </li>
-                                    <li>
-                                        <hr className="dropdown-divider" />
-                                    </li>
-                                    <li>
-                                        <a
-                                            className="dropdown-item disabled"
-                                            href="/services/other"
-                                        >
-                                            Others
-                                        </a>
-                                    </li>
                                 </ul>
                             </div>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/about">
-                                About
+                            <a className="nav-link" href="/blogs">
+                                Blog
                             </a>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/contact">
-                                Contact
-                            </a>
+                        <li className="nav-item dropdown">
+                            <div className="btn-group">
+                                <button
+                                    type="button"
+                                    className="btn btn-link nav-link dropdown-toggle"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    Other
+                                </button>
+                                <ul className="dropdown-menu">
+                                    <li>
+                                        <a
+                                            className="dropdown-item"
+                                            href="/about"
+                                        >
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a
+                                            className="dropdown-item"
+                                            href="/contact"
+                                        >
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
                     <form className="d-flex">
