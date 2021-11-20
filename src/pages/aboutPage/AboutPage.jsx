@@ -8,10 +8,11 @@ const AboutPage = () => {
         <div className="dkAboutPage">
             <section id="aboutHeaderSection" className="py-5 bg-dark">
                 <div className="container text-white">
-                    <h1 className="display-1">
-                        ABOUT AFI TECH
-                    </h1>
-                    <h6 className="text-muted">AFI TECH's goal is to deliver fast and reliable web and mobile software solutions for companies or individuals.</h6>
+                    <h1 className="display-1">ABOUT AFI TECH</h1>
+                    <h6 className="text-muted">
+                        AFI TECH's goal is to deliver fast and reliable web and
+                        mobile software solutions for companies or individuals.
+                    </h6>
                 </div>
             </section>
             <section id="meetTheTeamSection">
