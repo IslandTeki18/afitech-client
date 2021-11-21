@@ -1,7 +1,8 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./ServiceDetailsPage.scss";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { serviceFeatureInfo, projectList } from "../../utils/testData";
+import Icon from "../../components/icon/Icon";
 import ProjectListCard from "../../components/projectListCard/ProjectListCard";
 
 const ServiceDetailsPage = () => {
@@ -82,8 +83,41 @@ const ServiceDetailsPage = () => {
                 </div>
             </section>
             <section id="relatedProjectsSection">
-                <div className="container-fluid g-md-0">
+                <div className="container-fluid">
                     <div className="row">{renderProjectListCards()}</div>
+                </div>
+            </section>
+            <section id="pageNavigationSection">
+                <div className="container-fluid">
+                    <hr />
+                    <div className="d-flex justify-content-between align-items-center py-3">
+                        <button className="btn btn-link text-reset text-decoration-none d-flex align-items-center">
+                            <Icon
+                                icon="long-arrow-alt-left"
+                                iconStyle="fas"
+                                size="28"
+                                color="#3c3c3c"
+                                marginRight="10"
+                            />
+                            prev
+                        </button>
+                        <Link
+                            to="/services"
+                            className="btn btn-secondary circle-btn"
+                        >
+                            all
+                        </Link>
+                        <button className="btn btn-link text-reset text-decoration-none d-flex align-items-center">
+                            next
+                            <Icon
+                                icon="long-arrow-alt-right"
+                                iconStyle="fas"
+                                size="28"
+                                color="#3c3c3c"
+                                marginLeft="10"
+                            />
+                        </button>
+                    </div>
                 </div>
             </section>
         </div>

@@ -37,7 +37,7 @@ const Footer = () => {
         { name: "facebook", link: "www.google.com" },
         { name: "twitter", link: "www.google.com" },
         { name: "github", link: "www.google.com" },
-        { name: "google", link: "www.google.com" },
+        { name: "youtube", link: "www.google.com" },
     ];
 
     function renderSocialItems() {

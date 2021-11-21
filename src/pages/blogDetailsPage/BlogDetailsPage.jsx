@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
-import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
 import "./BlogDetailsPage.scss";
+import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
+import { Link } from "react-router-dom";
 
 const BlogDetailsPage = () => {
     // TODO: In the Blog List section change the look of the about column. Make into component, import that component here.
@@ -12,6 +13,9 @@ const BlogDetailsPage = () => {
         <div className="dkBlogDetailsPage">
             <section id="blogContentSection">
                 <div className="container">
+                    <Link to="/blogs" className="btn btn-secondary mt-2">
+                        back
+                    </Link>
                     <div className="row pt-3">
                         <div className="col-lg-9" id="blogContentColumn">
                             <img

@@ -1,6 +1,8 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./ProjectDetailsPage.scss";
 import Carousel from "../../components/carousel/Carousel";
+import Icon from "../../components/icon/Icon";
+import { Link } from "react-router-dom";
 
 const ProjectDetailsPage = () => {
     // Redux Project Details API Call
@@ -74,6 +76,39 @@ const ProjectDetailsPage = () => {
                                 </p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+            <section id="pageNavigationSection">
+                <div className="container-fluid">
+                    <hr />
+                    <div className="d-flex justify-content-between align-items-center py-3">
+                        <button className="btn btn-link text-reset text-decoration-none d-flex align-items-center">
+                            <Icon
+                                icon="long-arrow-alt-left"
+                                iconStyle="fas"
+                                size="28"
+                                color="#3c3c3c"
+                                marginRight="10"
+                            />
+                            prev
+                        </button>
+                        <Link
+                            to="/projects"
+                            className="btn btn-secondary circle-btn"
+                        >
+                            all
+                        </Link>
+                        <button className="btn btn-link text-reset text-decoration-none d-flex align-items-center">
+                            next
+                            <Icon
+                                icon="long-arrow-alt-right"
+                                iconStyle="fas"
+                                size="28"
+                                color="#3c3c3c"
+                                marginLeft="10"
+                            />
+                        </button>
                     </div>
                 </div>
             </section>
