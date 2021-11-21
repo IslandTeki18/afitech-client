@@ -1,10 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./HomePage.scss";
 import { Link, useHistory } from "react-router-dom";
 import { testimonials, projects, blogDisplay } from "../../utils/testData";
 import Carousel from "../../components/carousel/Carousel";
 import Icon from "../../components/icon/Icon";
-import ListGroup from "../../components/listGroup/ListGroup";
 import { servicesItems } from "../../utils/serviceItems";
 import ProjectDisplayCard from "../../components/projectDisplayCard/ProjectDisplayCard";
 import TestimonialCarousel from "../../components/testimonialCarousel/TestimonialCarousel";
@@ -12,9 +11,11 @@ import BlogDisplayCard from "../../components/blogDisplayCard/BlogDisplayCard";
 
 const HomePage = () => {
     const history = useHistory();
-
     // TODO: Needs Mobile Responsive (xlg desktop, lg laptop, tablet, mobile)
     // TODO: Break sections out
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
 
     return (
         <div className="dkHomePage">
@@ -50,7 +51,7 @@ const HomePage = () => {
                             </button>
                         </div>
                         <div className="col-md-6">
-                            <ListGroup isFlush>
+                            <ul className="list-group list-group-flush">
                                 {servicesItems.map((item, idx) => (
                                     <div
                                         className="border-bottom py-3"
@@ -80,7 +81,7 @@ const HomePage = () => {
                                         </button>
                                     </div>
                                 ))}
-                            </ListGroup>
+                            </ul>
                         </div>
                     </div>
                 </div>

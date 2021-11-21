@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./ProjectDetailsPage.scss";
 import Carousel from "../../components/carousel/Carousel";
 
 const ProjectDetailsPage = () => {
     // Redux Project Details API Call
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
 
     return (
         <div className="dkProjectDetailsPage">

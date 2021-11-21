@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./BlogListPage.scss";
 import BlogListCard from "../../components/blogListCard/BlogListCard";
 import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
@@ -7,6 +7,9 @@ import { blogList } from "../../utils/testData";
 const BlogListPage = () => {
     // TODO: Make Blog Test Data
     // TODO: Blog List Action
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
     function renderBlogListCards() {
         return blogList.map((item) => (
             <BlogListCard key={item.id} blog={item} />

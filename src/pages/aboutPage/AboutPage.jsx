@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactForm from "../../components/contactForm/ContactForm";
 import TeamMemberCard from "../../components/teamMemberCard/TeamMemberCard";
 import "./AboutPage.scss";
 
 const AboutPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
     return (
         <div className="dkAboutPage">
             <section id="aboutHeaderSection" className="py-5 bg-dark">

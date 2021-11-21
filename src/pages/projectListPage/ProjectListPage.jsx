@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 // import { Link } from "react-router-dom";
 import ProjectListCard from "../../components/projectListCard/ProjectListCard";
 import { projectList } from "../../utils/testData";
 
 const ProjectListPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
     return (
         <div className="dkProjectListPage">
             <section id="pageTitleSection">

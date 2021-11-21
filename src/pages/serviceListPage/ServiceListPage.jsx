@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ServiceListPage.scss";
 import { serviceList } from "../../utils/testData";
 import { Link } from "react-router-dom";
 
 const ServiceListPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
     function serviceListItem() {
         return (
             <>

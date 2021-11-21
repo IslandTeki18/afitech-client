@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./ServiceDetailsPage.scss";
 import { useParams } from "react-router-dom";
 import { serviceFeatureInfo, projectList } from "../../utils/testData";
@@ -7,6 +7,9 @@ import ProjectListCard from "../../components/projectListCard/ProjectListCard";
 const ServiceDetailsPage = () => {
     const params = useParams();
     // Redux Service Details Call
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
 
     function serviceFeatureCards() {
         return (

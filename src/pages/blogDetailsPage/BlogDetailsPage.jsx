@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
 import "./BlogDetailsPage.scss";
 
 const BlogDetailsPage = () => {
     // TODO: In the Blog List section change the look of the about column. Make into component, import that component here.
     // TODO: Call the Blog Details Action here
+    useEffect(() => {
+        window.scrollTo(0, 0, "smooth");
+    }, []);
     return (
         <div className="dkBlogDetailsPage">
             <section id="blogContentSection">
