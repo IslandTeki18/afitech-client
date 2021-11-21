@@ -29,7 +29,7 @@ const ServiceDetailsPage = () => {
         return projectList
             .filter((project) => project.projectType === params.service)
             .map((item, idx) => (
-                <div className="col-sm-12 col-md-4 mb-2" key={idx}>
+                <div className="col-sm-6 col-md-4 mb-2" key={idx}>
                     <ProjectListCard
                         title={item.title}
                         image={item.image}

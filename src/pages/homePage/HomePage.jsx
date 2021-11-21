@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./HomePage.scss";
 import { Link, useHistory } from "react-router-dom";
 import { testimonials, projects, blogDisplay } from "../../utils/testData";
@@ -11,12 +11,83 @@ import BlogDisplayCard from "../../components/blogDisplayCard/BlogDisplayCard";
 
 const HomePage = () => {
     const history = useHistory();
-    // TODO: Needs Mobile Responsive (xlg desktop, lg laptop, tablet, mobile)
-    // TODO: Break sections out
     useEffect(() => {
         window.scrollTo(0, 0, "smooth");
     }, []);
 
+    function renderProjectDisplayCards() {
+        return (
+            <div className="row">
+                {projects.map((project, idx) => (
+                    <div
+                        className="mobile-padding-bottom col-md-6 col-lg-4 mt-md-4 d-flex justify-content-center"
+                        key={idx}
+                    >
+                        <ProjectDisplayCard
+                            projectImg={project.projectImg}
+                            imgAlt={project.imgAlt}
+                            projectTitle={project.projectTitle}
+                            shortDescription={project.shortDescription}
+                            link={project.link}
+                        />
+                    </div>
+                ))}
+            </div>
+        );
+    }
+
+    function renderServiceNavigationList() {
+        return (
+            <div className="col-md-6">
+                <ul className="list-group list-group-flush">
+                    {servicesItems.map((item, idx) => (
+                        <div className="border-bottom py-3" key={idx}>
+                            <button
+                                type="button"
+                                className="list-group-item d-flex justify-content-between align-items-center w-100"
+                                style={{ border: "unset" }}
+                                aria-current="true"
+                                disabled={item.isDisabled}
+                                onClick={() => {
+                                    history.push(item.link);
+                                }}
+                            >
+                                {item.name}
+                                <Icon
+                                    icon="long-arrow-alt-right"
+                                    iconStyle="fas"
+                                    color={
+                                        item.isDisabled
+                                            ? "lightgrey"
+                                            : "#000000"
+                                    }
+                                    size="20"
+                                />
+                            </button>
+                        </div>
+                    ))}
+                </ul>
+            </div>
+        );
+    }
+
+    function renderBlogPostList() {
+        return (
+            <div className="col-md-8">
+                {blogDisplay.map((item, idx) => (
+                    <div className="py-4" key={idx}>
+                        <BlogDisplayCard
+                            img={item.image}
+                            imgAlt={`blog-${idx}`}
+                            title={item.title}
+                            link={item.link}
+                            datePublished={item.datePublished}
+                        />
+                    </div>
+                ))}
+            </div>
+        );
+    }
     return (
         <div className="dkHomePage">
             <section id="heroSection">
@@ -50,39 +121,7 @@ const HomePage = () => {
                                 all services
                             </button>
                         </div>
-                        <div className="col-md-6">
-                            <ul className="list-group list-group-flush">
-                                {servicesItems.map((item, idx) => (
-                                    <div
-                                        className="border-bottom py-3"
-                                        key={idx}
-                                    >
-                                        <button
-                                            type="button"
-                                            className="list-group-item d-flex justify-content-between align-items-center w-100"
-                                            style={{ border: "unset" }}
-                                            aria-current="true"
-                                            disabled={item.isDisabled}
-                                            onClick={() => {
-                                                history.push(item.link);
-                                            }}
-                                        >
-                                            {item.name}
-                                            <Icon
-                                                icon="long-arrow-alt-right"
-                                                iconStyle="fas"
-                                                color={
-                                                    item.isDisabled
-                                                        ? "lightgrey"
-                                                        : "#000000"
-                                                }
-                                                size="20"
-                                            />
-                                        </button>
-                                    </div>
-                                ))}
-                            </ul>
-                        </div>
+                        {renderServiceNavigationList()}
                     </div>
                 </div>
             </section>
@@ -91,31 +130,14 @@ const HomePage = () => {
                     <h2 className="text-white mobile-padding-center">
                         Recent Projects
                     </h2>
-                    <div className="row">
-                        {projects.map((project, idx) => (
-                            <div
-                                className="mobile-padding-bottom col-md-6 col-lg-4 mt-md-4 d-flex justify-content-center"
-                                key={idx}
-                            >
-                                <ProjectDisplayCard
-                                    projectImg={project.projectImg}
-                                    imgAlt={project.imgAlt}
-                                    projectTitle={project.projectTitle}
-                                    shortDescription={project.shortDescription}
-                                    link={project.link}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                    <div className="row justify-content-center mt-4">
-                        <div className="col-md-3 text-center">
-                            <Link
-                                className="btn btn-secondary w-50 text-uppercase"
-                                to="/projects"
-                            >
-                                All Work
-                            </Link>
-                        </div>
+                    {renderProjectDisplayCards()}
+                    <div className="text-center mt-4">
+                        <Link
+                            className="btn btn-secondary text-uppercase"
+                            to="/projects"
+                        >
+                            All Work
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -144,19 +166,7 @@ const HomePage = () => {
                                 All Posts
                             </Link>
                         </div>
-                        <div className="col-md-8">
-                            {blogDisplay.map((item, idx) => (
-                                <div className="py-4" key={idx}>
-                                    <BlogDisplayCard
-                                        img={item.image}
-                                        imgAlt={`blog-${idx}`}
-                                        title={item.title}
-                                        link={item.link}
-                                        datePublished={item.datePublished}
-                                    />
-                                </div>
-                            ))}
-                        </div>
+                        {renderBlogPostList()}
                     </div>
                 </div>
             </section>
