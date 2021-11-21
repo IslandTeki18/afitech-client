@@ -8,24 +8,22 @@ const ProjectListPage = () => {
         <div className="dkProjectListPage">
             <section id="pageTitleSection">
                 <div className="container pt-3">
-                    <div className="row">
-                        <div className="col text-center">
-                            <h1>Project List</h1>
-                        </div>
+                    <div className="text-center">
+                        <h1>Project List</h1>
                     </div>
                 </div>
             </section>
-            <section id="projectListSection" className="py-5">
+            <section id="projectListSection" className="py-lg-5">
                 <div className="container">
                     <div className="row">
                         {projectList.map((project) => (
-                            <div className="col-md-4">
+                            <div className="mt-2 col-md-6 col-lg-4">
                                 <ProjectListCard
                                     image={project.image}
                                     title={project.title}
-                                    altImage={project.altImage}
                                     projectType={project.projectDisplayType}
                                     link={project.link}
+                                    projectTags={project.projectTags}
                                 />
                             </div>
                         ))}

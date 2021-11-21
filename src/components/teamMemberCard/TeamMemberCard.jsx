@@ -32,7 +32,7 @@ const TeamMemberCard = (props) => {
             <>
                 {socialMediaLinks.map((item) => (
                     <div
-                        className="col-md-4 d-flex justify-content-center flex-column text-center"
+                        className="col-xs-4 col-sm-4 d-flex justify-content-center flex-column text-center"
                         key={item.name}
                     >
                         <a

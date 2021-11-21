@@ -51,8 +51,11 @@ const HomePage = () => {
                         </div>
                         <div className="col-md-6">
                             <ListGroup isFlush>
-                                {servicesItems.map((item) => (
-                                    <div className="border-bottom py-3">
+                                {servicesItems.map((item, idx) => (
+                                    <div
+                                        className="border-bottom py-3"
+                                        key={idx}
+                                    >
                                         <button
                                             type="button"
                                             className="list-group-item d-flex justify-content-between align-items-center w-100"
@@ -82,12 +85,15 @@ const HomePage = () => {
                     </div>
                 </div>
             </section>
-            <section id="recentProjectsSection" className="bg-dark py-6">
+            <section id="recentProjectsSection" className="bg-dark py-3">
                 <div className="container">
+                    <h2 className="text-white mobile-padding-center">
+                        Recent Projects
+                    </h2>
                     <div className="row">
                         {projects.map((project, idx) => (
                             <div
-                                className="col-md-4 d-flex justify-content-center"
+                                className="mobile-padding-bottom col-md-6 col-lg-4 mt-md-4 d-flex justify-content-center"
                                 key={idx}
                             >
                                 <ProjectDisplayCard
@@ -139,7 +145,7 @@ const HomePage = () => {
                         </div>
                         <div className="col-md-8">
                             {blogDisplay.map((item, idx) => (
-                                <div className="py-4">
+                                <div className="py-4" key={idx}>
                                     <BlogDisplayCard
                                         img={item.image}
                                         imgAlt={`blog-${idx}`}

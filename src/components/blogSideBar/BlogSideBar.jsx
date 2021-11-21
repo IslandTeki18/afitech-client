@@ -19,18 +19,18 @@ const BlogSideBar = (props) => {
     }
     return (
         <div className="dkBlogSideBar">
-            <div class={`card ${props.className || ""}`}>
+            <div className={`card ${props.className || ""}`}>
                 <img
                     src={props.img}
-                    class="card-img-top"
+                    className="card-img-top"
                     alt={`profile-${props.img || "about"}`}
                 />
-                <div class="card-body">
-                    <h5 class="card-title text-center border-top border-bottom">
+                <div className="card-body">
+                    <h5 className="card-title text-center border-top border-bottom">
                         About AFI TECH
                     </h5>
-                    <p class="card-text">{props.description}</p>
-                    <h5 class="card-title text-center border-top border-bottom">
+                    <p className="card-text">{props.description}</p>
+                    <h5 className="card-title text-center border-top border-bottom">
                         TAGS
                     </h5>
                     {renderTagButtons()}

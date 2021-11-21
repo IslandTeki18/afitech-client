@@ -41,7 +41,10 @@ const ContactPage = () => {
     }
     function renderContactInformationCards() {
         return (
-            <div id="contactInformation" className="col-md-6">
+            <div
+                id="contactInformation"
+                className="col-md-6 order-xs-2 order-md-1"
+            >
                 <div className="row">
                     <div className="col-12">
                         <div className="card">
@@ -77,7 +80,7 @@ const ContactPage = () => {
                                 <h3 className="text-muted text-uppercase">
                                     Email Us
                                 </h3>
-                                <p>afitechconsultancy@test.com</p>
+                                <p>afitech@test.com</p>
                             </div>
                         </div>
                     </div>
@@ -123,7 +126,7 @@ const ContactPage = () => {
                 <div className="container py-3">
                     <div className="row">
                         {renderContactInformationCards()}
-                        <div className="col-md-6">
+                        <div className="col-md-6 order-xs-1 order-md-2 mb-2">
                             <h4 className="mb-4">Leave us a message!</h4>
                             <ContactForm />
                         </div>

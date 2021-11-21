@@ -10,37 +10,31 @@ const ServiceDetailsPage = () => {
 
     function serviceFeatureCards() {
         return (
-            <>
-                <div className="row">
-                    {serviceFeatureInfo.map((item, idx) => (
-                        <div className="col-sm-12 col-lg-6 mb-3" key={idx}>
-                            <h4 className="me-3">{item.title}</h4>
-                            <p>{item.desc}</p>
-                        </div>
-                    ))}
-                </div>
-            </>
+            <div className="row">
+                {serviceFeatureInfo.map((item, idx) => (
+                    <div className="col-sm-12 col-lg-6 mb-3" key={idx}>
+                        <h4 className="me-3">{item.title}</h4>
+                        <p>{item.desc}</p>
+                    </div>
+                ))}
+            </div>
         );
     }
 
     function renderProjectListCards() {
-        return (
-            <>
-                {projectList
-                    .filter((project) => project.projectType === params.service)
-                    .map((item, idx) => (
-                        <div className="col-sm-12 col-md-4" key={idx}>
-                            <ProjectListCard
-                                title={item.title}
-                                image={item.image}
-                                altImage={item.altImage}
-                                projectType={item.projectDisplayType}
-                                link={item.link}
-                            />
-                        </div>
-                    ))}
-            </>
-        );
+        return projectList
+            .filter((project) => project.projectType === params.service)
+            .map((item, idx) => (
+                <div className="col-sm-12 col-md-4 mb-2" key={idx}>
+                    <ProjectListCard
+                        title={item.title}
+                        image={item.image}
+                        projectType={item.projectDisplayType}
+                        link={item.link}
+                        projectTags={item.projectTags}
+                    />
+                </div>
+            ));
     }
     return (
         <div className="dkServiceDetailsPage">
@@ -85,7 +79,7 @@ const ServiceDetailsPage = () => {
                 </div>
             </section>
             <section id="relatedProjectsSection">
-                <div className="container-fluid g-0">
+                <div className="container-fluid g-md-0">
                     <div className="row">{renderProjectListCards()}</div>
                 </div>
             </section>

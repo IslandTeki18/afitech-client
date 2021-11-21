@@ -1,18 +1,34 @@
 import React from "react";
 import "./ProjectListCard.scss";
-import Icon from "../icon/Icon";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const ProjectListCard = (props) => {
+    function renderProjectTags() {
+        return props.projectTags.map((item, idx) => (
+            <div className="col">
+                <span class="badge rounded-pill bg-secondary" key={idx}>
+                    {item}
+                </span>
+            </div>
+        ));
+    }
+
     return (
-        <div className="dkProjectListCard mx-md-2 my-md-3">
-            <img src={props.image} alt={props.altImage} className="img-fluid" />
-            <div className="card-overlay text-white">
-                <h3>{props.title}</h3>
-                <h6>{props.projectType}</h6>
-                <Link className="btn btn-secondary" to={props.link}>
-                    <Icon iconStyle="fas" icon="plus" color="#ffffff" size="20" />
+        <div className="dkProjectListCard card">
+            <img
+                src={props.image}
+                className="card-img-top"
+                alt={`project-${props.img}`}
+            />
+            <div className="card-body bg-dark text-white">
+                <h5 className="card-title">{props.title}</h5>
+                <hr />
+                {props.projectTags && (
+                    <div className="row pb-4">{renderProjectTags()}</div>
+                )}
+                <Link to={props.link} className="btn btn-primary">
+                    View Project
                 </Link>
             </div>
         </div>

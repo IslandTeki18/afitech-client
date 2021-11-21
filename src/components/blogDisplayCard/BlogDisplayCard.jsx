@@ -17,8 +17,8 @@ const BlogDisplayCard = (props) => {
                 </div>
                 <div className="col-md-8">
                     <div className="card-body text-white">
-                        <p class="card-text">
-                            <small class="text-muted">
+                        <p className="card-text">
+                            <small className="text-muted">
                                 {props.datePublished}
                             </small>
                         </p>

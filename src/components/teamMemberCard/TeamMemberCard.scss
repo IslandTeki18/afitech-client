@@ -6,6 +6,13 @@
     }
 
     .card-subtitle {
-        color: #6d6d6d
+        color: #6d6d6d;
+    }
+
+    @media screen and (max-width: 425px) {
+        .col-xs-4 {
+            flex: 0 0 auto;
+            width: 33.3333%;
+        }
     }
 }

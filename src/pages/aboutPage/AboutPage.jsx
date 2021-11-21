@@ -19,7 +19,7 @@ const AboutPage = () => {
                 <div className="container py-5">
                     <h1 className="display-3">Meet the team</h1>
                     <div className="row">
-                        <div className="col-md-4">
+                        <div className="col-md-6 col-lg-4">
                             <TeamMemberCard
                                 name="Landon McKell"
                                 position="CTO / Developer"

@@ -3,4 +3,14 @@
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
+    @media screen and (max-width: 425px) {
+        .mobile-padding-center {
+            text-align: center;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .mobile-padding-bottom {
+            padding-bottom: 2rem;
+        }
+    }
 }

@@ -77,27 +77,27 @@ export const blogDisplay = [
 export const projectList = [
     {
         title: "Platoe's Game Store",
-        altImage: "platoes game store",
         projectDisplayType: "1 Page Web App",
         projectType: "one-page",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
         link: "project/1",
+        projectTags: ["ReactJS", "Typescript", "NodeJS", "ExpressJs"],
     },
     {
         title: "Joe's Electronics",
-        altImage: "joes electronics",
         projectDisplayType: "Full Stack",
         projectType: "full-stack",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
         link: "project/2",
+        projectTags: ["ReactJS", "Typescript", "NodeJS", "ExpressJs"],
     },
     {
         title: "Jane's Dough-nuts",
-        altImage: "janes donuts",
         projectDisplayType: "Full Stack",
         projectType: "full-stack",
         image: "https://images.unsplash.com/photo-1621939514649-280e2ee25f60?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2670&q=80",
         link: "project/3",
+        projectTags: ["ReactJS", "Typescript", "NodeJS", "ExpressJs"],
     },
 ];
 

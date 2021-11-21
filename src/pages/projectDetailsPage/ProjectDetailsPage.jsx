@@ -9,11 +9,7 @@ const ProjectDetailsPage = () => {
         <div className="dkProjectDetailsPage">
             <section id="pageHeaderSection" className="my-5">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <h1>Project Title</h1>
-                        </div>
-                    </div>
+                    <h1>Project Title</h1>
                 </div>
             </section>
             <section id="projectDetailsSection" className="mb-5">
