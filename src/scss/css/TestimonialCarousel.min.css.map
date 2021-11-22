@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAGY,sBAHU,CAClB,eAAe,CACX,cAAc,CACV,eAAe,AAAC,CACZ,UAAU,CAAE,KAAK,CACjB,UAAU,CAAE,KAAK,CACjB,UAAU,CAAE,KAAK,CACpB",
+    "sources": [
+        "../../components/testimonialCarousel/TestimonialCarousel.scss"
+    ],
+    "names": [],
+    "file": "TestimonialCarousel.min.css"
+}

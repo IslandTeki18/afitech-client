@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,iBADa,CACb,QAAQ,AAAC,CACL,MAAM,CAAE,KAAK,CACb,UAAU,CAAE,KAAK,CACjB,eAAe,CAAE,UAAU,CAC9B,AALL,AAOI,iBAPa,CAOb,cAAc,AAAC,CACX,KAAK,CAAE,OAAO,CACjB,AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,EAXvC,AAYQ,iBAZS,CAYT,SAAS,AAAC,CACN,IAAI,CAAE,QAAQ,CACd,KAAK,CAAE,QAAQ,CAClB",
+    "sources": [
+        "../../components/teamMemberCard/TeamMemberCard.scss"
+    ],
+    "names": [],
+    "file": "TeamMemberCard.min.css"
+}

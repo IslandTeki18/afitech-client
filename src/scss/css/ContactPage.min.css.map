@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,cADU,CACV,eAAe,AAAC,CACZ,MAAM,CAAE,GAAG,CACX,gBAAgB,CAAE,GAAG,CACxB,AAED,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,EANvC,AAOQ,cAPM,CAON,WAAW,AAAC,CACR,KAAK,CAAE,CAAC,CACX,AATT,AAUQ,cAVM,CAUN,WAAW,AAAC,CACR,KAAK,CAAE,CAAC,CACX",
+    "sources": [
+        "../../pages/contactPage/ContactPage.scss"
+    ],
+    "names": [],
+    "file": "ContactPage.min.css"
+}

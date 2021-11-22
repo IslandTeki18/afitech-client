@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,AAAC,CACX,QAAQ,CAAE,cAAc,CACxB,QAAQ,CAAE,MAAM,CAChB,GAAG,CAAE,CAAC,CACT",
+    "sources": [
+        "../../components/blogSideBar/BlogSideBar.scss"
+    ],
+    "names": [],
+    "file": "BlogSideBar.min.css"
+}
