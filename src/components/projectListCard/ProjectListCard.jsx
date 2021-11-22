@@ -6,10 +6,8 @@ import { Link } from "react-router-dom";
 const ProjectListCard = (props) => {
     function renderProjectTags() {
         return props.projectTags.map((item, idx) => (
-            <div className="col">
-                <span class="badge rounded-pill bg-secondary" key={idx}>
-                    {item}
-                </span>
+            <div className="col" key={idx}>
+                <span className="badge rounded-pill bg-secondary">{item}</span>
             </div>
         ));
     }
@@ -37,7 +35,6 @@ const ProjectListCard = (props) => {
 
 ProjectListCard.propTypes = {
     title: PropTypes.string.isRequired,
-    altImage: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     projectType: PropTypes.string,
     link: PropTypes.string,

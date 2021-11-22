@@ -62,7 +62,7 @@ const Footer = () => {
 
     function renderNavLists(navList) {
         return navList.items.map((item, idx) => (
-            <li className="mb-3">
+            <li className="mb-3" key={idx}>
                 <Link
                     to={item.link}
                     className="text-reset text-decoration-none"

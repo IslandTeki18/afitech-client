@@ -12,14 +12,14 @@ const ServiceListPage = () => {
             <>
                 {serviceList.map((item, idx) => (
                     <div className="row mb-5" key={idx}>
-                        <div className="col-md-7">
+                        <div className="col-sm-12 col-lg-7">
                             <img
                                 src={item.img}
                                 alt={`service-${idx}`}
                                 className="img-fluid"
                             />
                         </div>
-                        <div className="col-md-5">
+                        <div className="col-sm-12 col-lg-5">
                             <h2 className="mb-3">{item.title}</h2>
                             <hr />
                             <p className="text-muted">{item.description}</p>
