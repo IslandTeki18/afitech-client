@@ -76,7 +76,7 @@ const Footer = () => {
     // TODO: Make Mobile Responsive
     // TODO: Add links to footer
     return (
-        <footer className="dkFooter mt-auto bg-dark py-5">
+        <footer className="dkFooter mt-auto py-5 bg-dark">
             <div className="container">
                 <div className="row text-white">
                     <div className="col-12 col-md-3">
