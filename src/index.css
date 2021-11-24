@@ -1,7 +1,23 @@
+/* Global CSS */
 
+/* Classes */
 .circle-btn {
     border-radius: 50%;
 }
 .modal-backdrop {
     z-index: 1044;
+}
+.text-line-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Colors */
+.lightGrey {
+    color: rgb(173, 173, 173);
+}
+.bg-lightGrey {
+    background: rgb(173, 173, 173);
 }

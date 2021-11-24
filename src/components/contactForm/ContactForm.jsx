@@ -4,6 +4,8 @@ import LabelInput from "../labelInput/LabelInput";
 
 const ContactForm = (props) => {
     function callBackData() {
+        if (!props.collectData()) return;
+        if (!props.formData) return;
         props.collectData(
             props.formData.firstName,
             props.formData.lastName,

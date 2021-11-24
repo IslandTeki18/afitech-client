@@ -8,10 +8,10 @@ const ProjectListPage = () => {
         window.scrollTo(0, 0, "smooth");
     }, []);
     return (
-        <div className="dkProjectListPage">
+        <div className="dkProjectListPage bg-dark">
             <section id="pageTitleSection">
                 <div className="container pt-3">
-                    <div className="text-center">
+                    <div className="text-center text-light">
                         <h1>Project List</h1>
                     </div>
                 </div>

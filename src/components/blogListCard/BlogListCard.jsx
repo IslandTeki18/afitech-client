@@ -22,10 +22,12 @@ const BlogListCard = (props) => {
                     </h6>
                     <h2 className="mb-0">{props.blog.title}</h2>
                     <p className="text-muted mb-1">Nov 12</p>
-                    <p className="mb-0">{props.blog.description}</p>
+                    <p className="mb-0 text-line-truncate">
+                        {props.blog.description}
+                    </p>
                     <Link
                         to={`/blogs/${props.blog.id}`}
-                        className="btn btn-link text-left"
+                        className="btn btn-secondary text-left"
                     >
                         continue reading
                     </Link>

@@ -26,7 +26,7 @@ const BlogListPage = () => {
                     </p>
                 </div>
             </section>
-            <section id="blogListSection" className="py-2">
+            <section id="blogListSection" className="py-2 bg-dark">
                 <div className="container">
                     <div className="row">
                         <div className="col-md-9">{renderBlogListCards()}</div>

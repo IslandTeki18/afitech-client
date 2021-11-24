@@ -10,9 +10,9 @@ export const servicesItems = [
         isDisabled: false,
     },
     {
-        name: "Mobile Applications (Coming Soon)",
-        link: "/",
-        isDisabled: true,
+        name: "Mobile Applications",
+        link: "/services/mobile-app",
+        isDisabled: false,
     },
     {
         name: "SEO & Marketing (Coming Soon)",

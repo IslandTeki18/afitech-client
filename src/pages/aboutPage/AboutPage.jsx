@@ -18,7 +18,7 @@ const AboutPage = () => {
                     </h6>
                 </div>
             </section>
-            <section id="meetTheTeamSection">
+            <section id="meetTheTeamSection" className="bg-light">
                 <div className="container py-5">
                     <h1 className="display-3">Meet the team</h1>
                     <div className="row">
@@ -41,10 +41,10 @@ const AboutPage = () => {
                         <div className="col-lg-7 text-center text-lg-left mb-4">
                             <h2>Checkout out work!</h2>
                             <p className="text-small mb-0">
-                                Lorem ipsum dolor sit amet, consectetur
-                                adipiscing elit. Nulla bibendum nunc non felis
-                                sollicitudin, ut convallis ante varius. Donec
-                                quis placerat ipsum, id tincidunt orci.
+                                Our goal is to build fast applications, whether
+                                for the web or for mobile phones. We strive to
+                                build solid, fast, and reliable applications
+                                that make sense for your budget.
                             </p>
                         </div>
                         <div className="col-lg-5 text-center text-lg-right">

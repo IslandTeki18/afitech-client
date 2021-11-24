@@ -30,16 +30,16 @@ const ContactPage = () => {
     function renderSocialLinkColumns() {
         return socialMediaLinks.map((social, idx) => (
             <div className="col-md-4" key={idx}>
-                <Link to={social.link}>
+                <a href={social.link} rel="noreferrer noopener" target="_blank" className="text-secondary">
                     <Icon
                         icon={social.icon}
                         iconStyle="fab"
                         size="40"
-                        color="#3c3c3c"
+                        color="#2d2d2d"
                         marginBottom="15"
                     />
                     <p>{social.name}</p>
-                </Link>
+                </a>
             </div>
         ));
     }
@@ -57,7 +57,7 @@ const ContactPage = () => {
                                     icon="marker"
                                     iconStyle="fas"
                                     size="50"
-                                    color="red"
+                                    color="#ffd700"
                                     marginBottom="15"
                                 />
                                 <h3 className="text-muted text-uppercase pb-2">
@@ -78,7 +78,7 @@ const ContactPage = () => {
                                     icon="envelope"
                                     iconStyle="fas"
                                     size="50"
-                                    color="red"
+                                    color="#ffd700"
                                     marginBottom="15"
                                 />
                                 <h3 className="text-muted text-uppercase">
@@ -95,7 +95,7 @@ const ContactPage = () => {
                                     icon="phone"
                                     iconStyle="fas"
                                     size="50"
-                                    color="red"
+                                    color="#ffd700"
                                     marginBottom="15"
                                 />
                                 <h3 className="text-muted text-uppercase">
@@ -126,11 +126,11 @@ const ContactPage = () => {
                     </div>
                 </div>
             </section>
-            <section id="pageContactDetailsSection">
+            <section id="pageContactDetailsSection" className="bg-dark">
                 <div className="container py-3">
                     <div className="row">
                         {renderContactInformationCards()}
-                        <div className="col-md-6 order-xs-1 order-md-2 mb-2">
+                        <div className="col-md-6 order-xs-1 order-md-2 mb-2 text-white">
                             <h4 className="mb-4">Leave us a message!</h4>
                             <ContactForm />
                         </div>
