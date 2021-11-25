@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "./ContactPage.scss";
-import { Link } from "react-router-dom";
 import Icon from "../../components/icon/Icon";
 import ContactForm from "../../components/contactForm/ContactForm";
 
