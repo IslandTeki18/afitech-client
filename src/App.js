@@ -4,7 +4,6 @@ import Header from "./app/header/Header";
 import Footer from "./app/footer/Footer";
 import OffcanvasBody from "./app/header/offcanvasBody/OffcanvasBody";
 import Loader from "./components/loader/Loader";
-import { findByLabelText } from "@testing-library/react";
 const AboutPage = React.lazy(() => import("./pages/aboutPage/AboutPage"));
 const BlogListPage = React.lazy(() =>
   import("./pages/blogListPage/BlogListPage")
