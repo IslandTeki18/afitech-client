@@ -14,6 +14,10 @@ import {
   serviceDetailsReducer,
   serviceListReducer,
 } from "../reducers/service.reducers";
+import {
+    employeeDetailsReducer,
+    employeeListReducer,
+  } from "../reducers/employee.reducers";
 
 const reducer = combineReducers({
   projectList: projectListReducer,
@@ -24,6 +28,8 @@ const reducer = combineReducers({
   testimonialDetails: testimonialDetailsReducer,
   serviceList: serviceListReducer,
   serviceDetails: serviceDetailsReducer,
+  employeeList: employeeListReducer,
+  employeeDetails: employeeDetailsReducer,
 });
 
 const initialState = {};
