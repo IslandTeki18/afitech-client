@@ -15,9 +15,9 @@ const ProjectListCard = (props) => {
     return (
         <div className="dkProjectListCard card bg-lightDark">
             <img
-                src={props.image}
+                src={props.image || "http://placehold.jp/500x300.png"}
                 className="card-img-top"
-                alt={`project-${props.img}`}
+                alt={props.title}
             />
             <div className="card-body bg-light">
                 <div className="d-flex justify-content-between align-items-center">

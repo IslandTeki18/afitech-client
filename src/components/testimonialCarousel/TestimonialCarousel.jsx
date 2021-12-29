@@ -12,10 +12,10 @@ const TestimonialCarousel = (props) => {
       data-bs-interval="false"
     >
       <div className="carousel-inner">
-        {props.testimonials.map((item) => (
+        {props.testimonials.map((item, idx) => (
           <div
             className={`carousel-item${item.isActive ? " active" : ""}`}
-            key={item.name}
+            key={idx}
           >
             <div className="card mb-3">
               <div className="row g-0">
