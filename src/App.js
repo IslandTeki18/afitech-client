@@ -42,18 +42,14 @@ function App() {
         <OffcanvasBody />
         <main className="flex-shrink-0">
           <Route path="/about" component={AboutPage} />
-          <Route exact path="/blogs" component={BlogListPage} />
-          <Route path="/blogs/:blog_id" component={BlogDetailsPage} />
+          <Route path="/blogs" component={BlogListPage} />
+          <Route exact path="/blog/:id" component={BlogDetailsPage} />
           <Route path="/contact" component={ContactPage} />
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/projects" component={ProjectListPage} />
-          <Route path="/projects/:id" component={ProjectDetailsPage} />
-          <Route exact path="/services" component={ServiceListPage} />
-          <Route
-            exact
-            path="/services/:service"
-            component={ServiceDetailsPage}
-          />
+          <Route path="/projects" component={ProjectListPage} />
+          <Route exact path="/project/:id" component={ProjectDetailsPage} />
+          <Route path="/services" component={ServiceListPage} />
+          <Route exact path="/services/:id" component={ServiceDetailsPage} />
         </main>
         <Footer />
       </Suspense>

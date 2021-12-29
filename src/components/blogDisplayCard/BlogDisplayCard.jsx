@@ -10,9 +10,10 @@ const BlogDisplayCard = (props) => {
             <div className="row g-0">
                 <div className="col-md-4">
                     <img
-                        src={props.img}
+                        src={props.img || "http://placehold.jp/500x300.png"}
                         className="img-fluid rounded-start"
-                        alt={props.altImg}
+                        alt={props.title}
+                        width={500}
                     />
                 </div>
                 <div className="col-md-8">

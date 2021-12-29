@@ -7,9 +7,9 @@ const ProjectDisplayCard = (props) => {
     return (
         <div className="dkProjectDisplayCard card border-0">
             <img
-                src={props.projectImg}
+                src={props.projectImg || "http://placehold.jp/500x300.png"}
                 className="card-img-top project-img"
-                alt={props.imgAlt}
+                alt={props.projectTitle}
             />
             <div className="card-body">
                 <h5 className="card-title">{props.projectTitle}</h5>
@@ -17,7 +17,7 @@ const ProjectDisplayCard = (props) => {
                     {props.shortDescription}
                 </p>
                 <Link
-                    to={`${props.link}`}
+                    to={props.link}
                     className="btn btn-secondary text-uppercase"
                 >
                     View Details
