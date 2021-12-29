@@ -32,7 +32,7 @@ function App() {
       <Suspense
         fallback={
           <div className="container">
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center align-items-center">
               <Loader />
             </div>
           </div>

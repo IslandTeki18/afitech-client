@@ -126,7 +126,7 @@ const HomePage = () => {
                   imgAlt={`blog-${idx}`}
                   title={item.title}
                   link={`/blog/${item._id}`}
-                  datePublished={item.createdAt}
+                  datePublished={item.updatedAt}
                 />
               </div>
             ))
