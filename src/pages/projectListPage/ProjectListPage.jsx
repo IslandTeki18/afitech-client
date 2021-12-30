@@ -30,17 +30,19 @@ const ProjectListPage = () => {
             {loading ? (
               <Loader />
             ) : (
-              projects.map((project, idx) => (
-                <div className="mt-2 col-md-6 col-lg-4" key={idx}>
-                  <ProjectListCard
-                    image={project.image}
-                    title={project.title}
-                    projectType={project.projectDisplayType}
-                    link={`/project/${project._id}`}
-                    projectTags={project.projectTags}
-                  />
-                </div>
-              ))
+              projects
+                .filter((project) => project.isPublished)
+                .map((project, idx) => (
+                  <div className="mt-2 col-md-6 col-lg-4" key={idx}>
+                    <ProjectListCard
+                      image={project.image}
+                      title={project.title}
+                      projectType={project.projectDisplayType}
+                      link={`/project/${project._id}`}
+                      projectTags={project.projectTags}
+                    />
+                  </div>
+                ))
             )}
           </div>
         </div>

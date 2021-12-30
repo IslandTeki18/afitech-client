@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./app/header/Header";
 import Footer from "./app/footer/Footer";
 import OffcanvasBody from "./app/header/offcanvasBody/OffcanvasBody";
@@ -40,17 +40,19 @@ function App() {
       >
         <Header />
         <OffcanvasBody />
-        <main className="flex-shrink-0">
-          <Route path="/about" component={AboutPage} />
-          <Route path="/blogs" component={BlogListPage} />
-          <Route exact path="/blog/:id" component={BlogDetailsPage} />
-          <Route path="/contact" component={ContactPage} />
-          <Route exact path="/" component={HomePage} />
-          <Route path="/projects" component={ProjectListPage} />
-          <Route exact path="/project/:id" component={ProjectDetailsPage} />
-          <Route path="/services" component={ServiceListPage} />
-          <Route exact path="/services/:id" component={ServiceDetailsPage} />
-        </main>
+        <Switch>
+          <main className="flex-shrink-0">
+            <Route path="/about" component={AboutPage} />
+            <Route path="/blogs" component={BlogListPage} />
+            <Route exact path="/blog/:id" component={BlogDetailsPage} />
+            <Route path="/contact" component={ContactPage} />
+            <Route exact path="/" component={HomePage} />
+            <Route path="/projects" component={ProjectListPage} />
+            <Route exact path="/project/:id" component={ProjectDetailsPage} />
+            <Route path="/services" component={ServiceListPage} />
+            <Route exact path="/service/:id" component={ServiceDetailsPage} />
+          </main>
+        </Switch>
         <Footer />
       </Suspense>
     </Router>
