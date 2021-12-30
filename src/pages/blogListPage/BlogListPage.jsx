@@ -1,43 +1,47 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./BlogListPage.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { listBlogs } from "../../actions/blog.actions";
 import BlogListCard from "../../components/blogListCard/BlogListCard";
 import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
-import { blogList } from "../../utils/testData";
+import Loader from "../../components/loader/Loader";
+import AlertBanner from "../../components/alertBanner/AlertBanner";
 
 const BlogListPage = () => {
-    // TODO: Make Blog Test Data
-    // TODO: Blog List Action
-    useEffect(() => {
-        window.scrollTo(0, 0, "smooth");
-    }, []);
-    function renderBlogListCards() {
-        return blogList.map((item) => (
-            <BlogListCard key={item.id} blog={item} />
-        ));
-    }
-    return (
-        <div className="dkBlogListPage">
-            <section id="heroSection" className="py-5 bg-dark">
-                <div className="container text-center text-white">
-                    <h1 className="display-2 text-uppercase">Blog List</h1>
-                    <p>
-                        "The Advance Level is Mastery of the Basics" - Ray
-                        Manchini
-                    </p>
-                </div>
-            </section>
-            <section id="blogListSection" className="py-2 bg-dark">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-9">{renderBlogListCards()}</div>
-                        <div className="col-md-3 ms-auto">
-                            <BlogSideBar />
-                        </div>
-                    </div>
-                </div>
-            </section>
+  const dispatch = useDispatch();
+  const blogList = useSelector((state) => state.blogList);
+  const { loading, error, blogs } = blogList;
+
+  useEffect(() => {
+    window.scrollTo(0, "smooth");
+    dispatch(listBlogs());
+  }, [dispatch]);
+  function renderBlogListCards() {
+    return blogs.map((item, idx) => <BlogListCard key={idx} blog={item} />);
+  }
+  return (
+    <div className="dkBlogListPage">
+      <section id="heroSection" className="py-5 bg-dark">
+        <div className="container text-center text-white">
+          <h1 className="display-2 text-uppercase">Blog List</h1>
+          <p>"The Advance Level is Mastery of the Basics" - Ray Manchini</p>
         </div>
-    );
+      </section>
+      <section id="blogListSection" className="py-2 bg-dark">
+        <div className="container">
+          {error && <AlertBanner variant="danger">{error}</AlertBanner>}
+          <div className="row">
+            <div className="col-md-9">
+              {loading ? <Loader /> : renderBlogListCards()}
+            </div>
+            <div className="col-md-3 ms-auto">
+              <BlogSideBar />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 };
 
 export default BlogListPage;
