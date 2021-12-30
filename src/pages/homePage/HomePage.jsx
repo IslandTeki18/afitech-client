@@ -82,7 +82,9 @@ const HomePage = () => {
             <AlertBanner variant="danger">{serviceError}</AlertBanner>
           )}
           {serviceLoading ? (
-            <Loader />
+            <div className="d-flex justify-content-center align-items-center">
+              <Loader />
+            </div>
           ) : (
             services.map((item, idx) => (
               <div className="border-bottom py-3" key={idx}>
