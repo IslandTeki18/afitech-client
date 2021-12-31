@@ -37,7 +37,8 @@ const ProjectListPage = () => {
                     <ProjectListCard
                       image={project.image}
                       title={project.title}
-                      projectType={project.projectDisplayType}
+                      projectType={project.projectType}
+                      shortDescription={project.shortDescription}
                       link={`/project/${project._id}`}
                       projectTags={project.projectTags}
                     />

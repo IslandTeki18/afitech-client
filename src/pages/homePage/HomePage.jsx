@@ -55,20 +55,22 @@ const HomePage = () => {
         {projectLoading ? (
           <Loader />
         ) : (
-          projects.map((project, idx) => (
-            <div
-              className="mobile-padding-bottom col-md-6 col-lg-4 mt-md-4 d-flex justify-content-center"
-              key={idx}
-            >
-              <ProjectDisplayCard
-                projectImg={project.projectImg}
-                imgAlt={project.title}
-                projectTitle={project.title}
-                shortDescription={project.shortDescription}
-                link={`/project/${project._id}`}
-              />
-            </div>
-          ))
+          projects
+            .filter((project) => project.isPublished)
+            .map((project, idx) => (
+              <div
+                className="mobile-padding-bottom col-md-6 col-lg-4 mt-md-4 d-flex justify-content-center"
+                key={idx}
+              >
+                <ProjectDisplayCard
+                  projectImg={project.projectImg}
+                  imgAlt={project.title}
+                  projectTitle={project.title}
+                  shortDescription={project.shortDescription}
+                  link={`/project/${project._id}`}
+                />
+              </div>
+            ))
         )}
       </div>
     );
@@ -86,26 +88,28 @@ const HomePage = () => {
               <Loader />
             </div>
           ) : (
-            services.map((item, idx) => (
-              <div className="border-bottom py-3" key={idx}>
-                <Link
-                  type="button"
-                  className="list-group-item d-flex justify-content-between align-items-center w-100"
-                  style={{ border: "unset" }}
-                  aria-current="true"
-                  disabled={item.isAvailable}
-                  to={`/service/${item._id}`}
-                >
-                  {item.title}
-                  <Icon
-                    icon="long-arrow-alt-right"
-                    iconStyle="fas"
-                    color={item.isAvailable ? "lightgrey" : "#000000"}
-                    size="20"
-                  />
-                </Link>
-              </div>
-            ))
+            services
+              .filter((service) => service.isAvailable)
+              .map((item, idx) => (
+                <div className="border-bottom py-3" key={idx}>
+                  <Link
+                    type="button"
+                    className="list-group-item d-flex justify-content-between align-items-center w-100"
+                    style={{ border: "unset" }}
+                    aria-current="true"
+                    disabled={item.isAvailable}
+                    to={`/service/${item._id}`}
+                  >
+                    {item.title}
+                    <Icon
+                      icon="long-arrow-alt-right"
+                      iconStyle="fas"
+                      color={item.isAvailable ? "lightgrey" : "#000000"}
+                      size="20"
+                    />
+                  </Link>
+                </div>
+              ))
           )}
         </ul>
       </div>
@@ -204,7 +208,7 @@ const HomePage = () => {
             <div className="col-md-4 text-white">
               <h1 className="display-4">What's New?</h1>
               <Link
-                to="/blog-list"
+                to="/blogs"
                 className="btn btn-secondary mt-5 text-uppercase"
               >
                 All Posts

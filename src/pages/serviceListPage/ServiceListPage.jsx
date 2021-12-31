@@ -15,38 +15,40 @@ const ServiceListPage = () => {
     dispatch(listServices());
   }, [dispatch]);
   function serviceListItem() {
-    return services.map((item, idx) => (
-      <div className="row mb-5" key={idx}>
-        <div className="col-sm-12 col-lg-7">
-          <img
-            src={item.img || "http://placehold.jp/500x300.png"}
-            alt={item.title}
-            className="img-fluid"
-          />
-        </div>
-        <div className="col-sm-12 col-lg-5">
-          <h2 className="mb-3">{item.title}</h2>
-          <hr />
-          <p className="text-muted">{item.shortDescription}</p>
-          <ul className="list-group list-group-flush">
-            {item.serviceFeatures ? (
-              item.serviceFeatures.map((subItem, idx) => (
-                <li className="list-group-item" key={idx}>
-                  {subItem.title}
+    return services
+      .filter((service) => service.isAvailable)
+      .map((item, idx) => (
+        <div className="row mb-5" key={idx}>
+          <div className="col-sm-12 col-lg-7">
+            <img
+              src={item.img || "http://placehold.jp/500x300.png"}
+              alt={item.title}
+              className="img-fluid"
+            />
+          </div>
+          <div className="col-sm-12 col-lg-5">
+            <h2 className="mb-3">{item.title}</h2>
+            <hr />
+            <p className="text-muted">{item.shortDescription}</p>
+            <ul className="list-group list-group-flush">
+              {item.serviceFeatures ? (
+                item.serviceFeatures.map((subItem, idx) => (
+                  <li className="list-group-item" key={idx}>
+                    {subItem.title}
+                  </li>
+                ))
+              ) : (
+                <li className="list-group-item">
+                  <p>There are no service features.</p>
                 </li>
-              ))
-            ) : (
-              <li className="list-group-item">
-                <p>There are no service features.</p>
-              </li>
-            )}
-          </ul>
-          <Link className="btn btn-dark mt-4" to={`/service/${item._id}`}>
-            See Service
-          </Link>
+              )}
+            </ul>
+            <Link className="btn btn-dark mt-4" to={`/service/${item._id}`}>
+              See Service
+            </Link>
+          </div>
         </div>
-      </div>
-    ));
+      ));
   }
 
   return (
