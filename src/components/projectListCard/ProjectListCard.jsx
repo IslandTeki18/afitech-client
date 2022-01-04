@@ -21,7 +21,9 @@ const ProjectListCard = (props) => {
       />
       <div className="card-body bg-light">
         <div className="d-flex justify-content-between align-items-center">
-          <h5 className="card-title text-truncate">{props.title}</h5>
+          <h5 className="card-title d-inline-block text-truncate">
+            {props.title}
+          </h5>
           <h6 className="card-subtitle text-truncate text-secondary">
             {props.projectType}
           </h6>
