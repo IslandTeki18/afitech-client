@@ -1,15 +1,25 @@
 .dkContactPage {
-    .custom-divider {
-        height: 3px;
-        background-color: red;
-    }
+  .custom-divider {
+    height: 3px;
+    background-color: red;
+  }
 
-    @media screen and (max-width: 425px) {
-        .order-xs-1 {
-            order: 1;
-        }
-        .order-xs-2 {
-            order: 2;
-        }
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 425px) {
+    .order-xs-1 {
+      order: 1;
     }
+    .order-xs-2 {
+      order: 2;
+    }
+  }
 }
