@@ -21,7 +21,7 @@ const BlogSideBar = (props) => {
         <div className="dkBlogSideBar">
             <div className={`card ${props.className || ""}`}>
                 <img
-                    src={props.img}
+                    src={props.img || "http://placehold.jp/700x500.png"}
                     className="card-img-top"
                     alt={`profile-${props.img || "about"}`}
                 />

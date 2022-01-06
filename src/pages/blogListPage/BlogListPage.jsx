@@ -35,7 +35,7 @@ const BlogListPage = () => {
               {loading ? <Loader /> : renderBlogListCards()}
             </div>
             <div className="col-md-3 ms-auto">
-              <BlogSideBar />
+              <BlogSideBar description="AFI TECH not only builds websites and apps but also strives to build the community." />
             </div>
           </div>
         </div>
