@@ -38,6 +38,7 @@ const TeamMemberCard = (props) => {
       <div className="card-body">
         <h2 className="card-title">{props.name}</h2>
         <h4 className="card-subtitle">{props.position}</h4>
+        <p>{props.aboutEmployee}</p>
         <div className="row pt-4">{renderSocialMediaLinks()}</div>
       </div>
     </div>
@@ -45,7 +46,7 @@ const TeamMemberCard = (props) => {
 };
 
 TeamMemberCard.propTypes = {
-  profileImg: PropTypes.string.isRequired,
+  profileImg: PropTypes.string,
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
 };

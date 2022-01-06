@@ -16,22 +16,19 @@ const AboutPage = () => {
     window.scrollTo(0, "smooth");
     dispatch(listEmployees());
   }, [dispatch]);
+  console.log(employees);
 
   function renderEmployeeCards() {
-    return employees.map((item, idx) =>
-      loading ? (
-        <Loader />
-      ) : (
-        <div className="col-md-6 col-lg-4">
-          <TeamMemberCard
-            key={idx}
-            name={`${item.firstName} ${item.lastName}`}
-            position={item.position}
-            profileImg={item.image}
-          />
-        </div>
-      )
-    );
+    return employees.map((item, idx) => (
+      <div className="col-md-6 col-lg-4" key={idx}>
+        <TeamMemberCard
+          name={`${item.firstName} ${item.lastName}`}
+          position={item.position}
+          profileImg={item.image}
+          aboutEmployee={item.aboutEmployee}
+        />
+      </div>
+    ));
   }
   return (
     <div className="dkAboutPage">
@@ -49,7 +46,7 @@ const AboutPage = () => {
           <h1 className="display-3">Meet the team</h1>
           <div className="row">
             {error && <AlertBanner variant="danger">{error}</AlertBanner>}
-            {renderEmployeeCards()}
+            {loading ? <Loader /> : renderEmployeeCards()}
           </div>
         </div>
       </section>
