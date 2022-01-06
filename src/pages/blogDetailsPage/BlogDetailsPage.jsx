@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import parse from "html-react-parser";
 import "./BlogDetailsPage.scss";
 import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
 import { Link, useParams } from "react-router-dom";
@@ -45,12 +46,12 @@ const BlogDetailsPage = () => {
                   <div className="col-6 text-end">{blog.createdAt}</div>
                 </div>
                 <div className="blog-content">
-                  <p>{blog.content}</p>
+                  <p>{parse(`${blog.content}`)}</p>
                 </div>
               </div>
             )}
             <div className="col-lg-3" id="blogAboutMeColumn">
-              <BlogSideBar />
+              <BlogSideBar description="AFI TECH not only builds websites and apps but also strives to build the community." />
             </div>
           </div>
         </div>

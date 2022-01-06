@@ -31,7 +31,7 @@ function App() {
     <Router>
       <Suspense
         fallback={
-          <div className="container">
+          <div className="container w-100 h-100">
             <div className="d-flex justify-content-center align-items-center">
               <Loader />
             </div>
