@@ -6,10 +6,9 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailBlog } from "../../actions/blog.actions";
 import Loader from "../../components/loader/Loader";
-import AlertBanner from "../../components/alertBanner/AlertBanner";
+import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const BlogDetailsPage = () => {
-  // TODO: In the Blog List section change the look of the about column. Make into component, import that component here.
   const { id } = useParams();
   const dispatch = useDispatch();
   const blogDetails = useSelector((state) => state.blogDetails);
