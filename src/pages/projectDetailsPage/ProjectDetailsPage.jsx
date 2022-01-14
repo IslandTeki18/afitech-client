@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import "./ProjectDetailsPage.scss";
-import Carousel from "../../components/carousel/Carousel";
-import Icon from "../../components/icon/Icon";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import Loader from "../../components/loader/Loader";
-import AlertBanner from "../../components/alertBanner/AlertBanner";
 import { detailProject } from "../../actions/project.actions";
+import Carousel from "../../components/molecules/carousel/Carousel";
+import Icon from "../../components/atoms/icon/Icon";
+import Loader from "../../components/atoms/loader/Loader";
+import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const ProjectDetailsPage = () => {
   const { id } = useParams();

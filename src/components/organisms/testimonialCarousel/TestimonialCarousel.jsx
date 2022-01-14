@@ -1,7 +1,7 @@
 import React from "react";
 import "./TestimonialCarousel.scss";
 import PropTypes from "prop-types";
-import Icon from "../icon/Icon";
+import Icon from "../../atoms/icon/Icon";
 
 const TestimonialCarousel = (props) => {
   return (

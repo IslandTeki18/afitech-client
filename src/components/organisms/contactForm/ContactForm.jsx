@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import LabelInput from "../labelInput/LabelInput";
+import LabelInput from "../../molecules/labelInput/LabelInput";
 
 const ContactForm = (props) => {
     function callBackData() {

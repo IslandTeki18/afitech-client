@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../../atoms/button/Button";
 
 const AlertBanner = (props) => {
   return (
@@ -11,12 +12,12 @@ const AlertBanner = (props) => {
       >
         {props.children}
         {props.isDismissable && (
-          <button
+          <Button
             type="button"
             class="btn-close"
-            data-bs-dismiss="alert"
-            aria-label="Close"
-          ></button>
+            data-bs-dismiss="alter"
+            ariaLabel="Close"
+          />
         )}
       </div>
     </div>

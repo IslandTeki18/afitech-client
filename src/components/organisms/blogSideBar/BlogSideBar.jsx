@@ -1,7 +1,7 @@
 import React from "react";
 import "./BlogSideBar.scss";
 import { Link } from "react-router-dom";
-import { blogTags } from "../../utils/testData";
+import { blogTags } from "../../../utils/testData";
 import PropTypes from "prop-types";
 
 const BlogSideBar = (props) => {

@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import parse from "html-react-parser";
 import "./BlogDetailsPage.scss";
-import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
+import BlogSideBar from "../../components/organisms/blogSideBar/BlogSideBar";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailBlog } from "../../actions/blog.actions";
-import Loader from "../../components/loader/Loader";
+import Loader from "../../components/atoms/loader/Loader";
 import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const BlogDetailsPage = () => {

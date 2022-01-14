@@ -1,11 +1,10 @@
 import React from "react";
-import "./Image.scss"
 import PropTypes from "prop-types";
 
 const Image = (props) => {
   return (
-    <div className="dkImage">
       <img
+      id={props.id}
         src={props.src}
         srcSet={props.srcSet}
         alt={props.imgAlt}
@@ -15,7 +14,6 @@ const Image = (props) => {
         height={props.imgHeight}
         width={props.imgWidth}
       />
-    </div>
   );
 };
 
@@ -28,6 +26,7 @@ Image.propTypes = {
   imgLoading: PropTypes.string,
   imgHeight: PropTypes.string || PropTypes.number,
   imgWidth: PropTypes.string || PropTypes.number,
+  id: PropTypes.string
 };
 
 export default Image;

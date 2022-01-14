@@ -4,10 +4,10 @@ import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailService } from "../../actions/service.actions";
 import { listProjects } from "../../actions/project.actions";
-import Icon from "../../components/icon/Icon";
-import ProjectListCard from "../../components/projectListCard/ProjectListCard";
-import Loader from "../../components/loader/Loader";
-import AlertBanner from "../../components/alertBanner/AlertBanner";
+import Icon from "../../components/atoms/icon/Icon";
+import ProjectListCard from "../../components/organisms/projectListCard/ProjectListCard";
+import Loader from "../../components/atoms/loader/Loader";
+import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const ServiceDetailsPage = () => {
   const dispatch = useDispatch();

@@ -6,13 +6,13 @@ import { listBlogs } from "../../actions/blog.actions";
 import { listProjects } from "../../actions/project.actions";
 import { listTestimonials } from "../../actions/testimonial.actions";
 import { listServices } from "../../actions/service.actions";
-import Carousel from "../../components/carousel/Carousel";
-import Icon from "../../components/icon/Icon";
-import ProjectDisplayCard from "../../components/projectDisplayCard/ProjectDisplayCard";
-import TestimonialCarousel from "../../components/testimonialCarousel/TestimonialCarousel";
-import BlogDisplayCard from "../../components/blogDisplayCard/BlogDisplayCard";
-import Loader from "../../components/loader/Loader";
-import AlertBanner from "../../components/alertBanner/AlertBanner";
+import Carousel from "../../components/molecules/carousel/Carousel";
+import Icon from "../../components/atoms/icon/Icon";
+import ProjectDisplayCard from "../../components/organisms/projectDisplayCard/ProjectDisplayCard";
+import TestimonialCarousel from "../../components/organisms/testimonialCarousel/TestimonialCarousel";
+import BlogDisplayCard from "../../components/organisms/blogDisplayCard/BlogDisplayCard";
+import Loader from "../../components/atoms/loader/Loader";
+import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const HomePage = () => {
   const history = useHistory();

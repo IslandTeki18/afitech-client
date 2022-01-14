@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./app/header/Header";
 import Footer from "./app/footer/Footer";
 import OffcanvasBody from "./app/header/offcanvasBody/OffcanvasBody";
-import Loader from "./components/loader/Loader";
+import Loader from "./components/atoms/loader/Loader";
 const AboutPage = React.lazy(() => import("./pages/aboutPage/AboutPage"));
 const BlogListPage = React.lazy(() =>
   import("./pages/blogListPage/BlogListPage")
@@ -41,17 +41,19 @@ function App() {
         <Header />
         <OffcanvasBody />
         <Switch>
-          <main className="flex-shrink-0">
-            <Route path="/about" component={AboutPage} />
-            <Route path="/blogs" component={BlogListPage} />
-            <Route exact path="/blog/:id" component={BlogDetailsPage} />
-            <Route path="/contact" component={ContactPage} />
-            <Route exact path="/" component={HomePage} />
-            <Route path="/projects" component={ProjectListPage} />
-            <Route exact path="/project/:id" component={ProjectDetailsPage} />
-            <Route path="/services" component={ServiceListPage} />
-            <Route exact path="/service/:id" component={ServiceDetailsPage} />
-          </main>
+          <React.Fragment>
+            <main className="flex-shrink-0">
+              <Route path="/about" component={AboutPage} />
+              <Route path="/blogs" component={BlogListPage} />
+              <Route exact path="/blog/:id" component={BlogDetailsPage} />
+              <Route path="/contact" component={ContactPage} />
+              <Route exact path="/" component={HomePage} />
+              <Route path="/projects" component={ProjectListPage} />
+              <Route exact path="/project/:id" component={ProjectDetailsPage} />
+              <Route path="/services" component={ServiceListPage} />
+              <Route exact path="/service/:id" component={ServiceDetailsPage} />
+            </main>
+          </React.Fragment>
         </Switch>
         <Footer />
       </Suspense>

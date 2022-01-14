@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import "./BlogListPage.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { listBlogs } from "../../actions/blog.actions";
-import BlogListCard from "../../components/blogListCard/BlogListCard";
-import BlogSideBar from "../../components/blogSideBar/BlogSideBar";
-import Loader from "../../components/loader/Loader";
-import AlertBanner from "../../components/alertBanner/AlertBanner";
+import BlogListCard from "../../components/organisms/blogListCard/BlogListCard";
+import BlogSideBar from "../../components/organisms/blogSideBar/BlogSideBar";
+import Loader from "../../components/atoms/loader/Loader";
+import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const BlogListPage = () => {
   const dispatch = useDispatch();

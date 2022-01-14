@@ -1,7 +1,7 @@
 import React from "react";
 import "./TeamMemberCard.scss";
 import PropTypes from "prop-types";
-import Icon from "../icon/Icon";
+import Icon from "../../atoms/icon/Icon";
 
 const TeamMemberCard = (props) => {
   // TODO: Find way to store this information and bring into component
