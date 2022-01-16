@@ -1,18 +1,19 @@
 import React from "react";
 import "./BlogDisplayCard.scss";
 import PropTypes from "prop-types";
-import Icon from "../../atoms/icon/Icon";
 import { Link } from "react-router-dom";
+import Icon from "../../atoms/icon/Icon";
+import Image from "../../atoms/image/Image";
 
 const BlogDisplayCard = (props) => {
   return (
     <div className="dkBlogDisplayCard card border-0 bg-dark">
       <div className="row g-0">
         <div className="col-md-4">
-          <img
+          <Image
             src={props.img}
             className="img-fluid rounded-start"
-            alt={props.title}
+            imgAlt={props.title}
             width={500}
           />
         </div>

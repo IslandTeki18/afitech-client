@@ -1,13 +1,14 @@
 import React from "react";
 import "./LabelInput.scss";
 import PropTypes from "prop-types";
+import Input from "../../atoms/input/Input";
 
 const LabelInput = (props) => {
     return (
         <div className="dkLabelInput">
             {props.label && (
                 <label
-                    for="inputEmail4"
+                    htmlFor={props.id}
                     className={`form-label${
                         props.labelClassName ? ` ${props.labelClassName}` : ""
                     }`}
@@ -15,13 +16,13 @@ const LabelInput = (props) => {
                     {props.label}
                 </label>
             )}
-            <input
+            <Input
                 type={props.type}
                 className={`form-control${
                     props.inputClassName ? ` ${props.inputClassName}` : ""
                 }`}
                 placeholder={props.placeholder}
-                id={props.label}
+                id={props.id}
                 onChange={(e) => props.callback(e.target.value)}
             />
         </div>
@@ -30,6 +31,7 @@ const LabelInput = (props) => {
 
 LabelInput.propTypes = {
     label: PropTypes.string,
+    id: PropTypes.string,
     type: PropTypes.string.isRequired,
     labelClassName: PropTypes.string,
     inputClassName: PropTypes.string,

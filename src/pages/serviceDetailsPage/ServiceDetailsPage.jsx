@@ -26,6 +26,7 @@ const ServiceDetailsPage = () => {
     dispatch(detailService(id));
     dispatch(listProjects());
   }, [dispatch, id]);
+  console.log(service);
 
   function serviceFeatureCards() {
     return (

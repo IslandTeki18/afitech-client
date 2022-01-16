@@ -19,7 +19,7 @@ const Carousel = () => {
           type="button"
           data-bs-target="#carouselIndicators"
           data-bs-slide-to="0"
-          className="btn btn-secondary active"
+          className="active"
           aria-current="true"
           aria-label="image 1"
         />
@@ -28,14 +28,12 @@ const Carousel = () => {
           data-bs-target="#carouselIndicators"
           data-bs-slide-to="2"
           aria-label="image 2"
-          className="btn btn-secondary"
         />
         <Button
           type="button"
           data-bs-target="#carouselIndicators"
           data-bs-slide-to="3"
           aria-label="image 3"
-          className="btn btn-secondary"
         />
       </div>
       <div className="carousel-inner">
