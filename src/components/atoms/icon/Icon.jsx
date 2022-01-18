@@ -27,6 +27,13 @@ const Icon = (props) => {
         marginRight: `${props.marginRight ? `${props.marginRight}px` : "0"}`,
         marginLeft: `${props.marginLeft ? `${props.marginLeft}px` : "0"}`,
         margin: `${props.margin ? `${props.margin}px` : 0}`,
+        padding: `${props.padding ? `${props.padding}px` : 0}`,
+        paddingLeft: `${props.paddingLeft ? `${props.paddingLeft}px` : 0}`,
+        paddingRight: `${props.paddingRight ? `${props.paddingRight}px` : 0}`,
+        paddingTop: `${props.paddingTop ? `${props.paddingTop}px` : 0}`,
+        paddingBottom: `${
+          props.paddingBottom ? `${props.paddingBottom}px` : 0
+        }`,
         cursor: `${props.isClickable ? "pointer" : "arrow"}`,
       }}
     />
@@ -44,6 +51,11 @@ Icon.propTypes = {
   marginLeft: PropTypes.string || PropTypes.number,
   marginRight: PropTypes.string || PropTypes.number,
   margin: PropTypes.string || PropTypes.number,
+  padding: PropTypes.string || PropTypes.number,
+  paddingLeft: PropTypes.string || PropTypes.number,
+  paddingRight: PropTypes.string || PropTypes.number,
+  paddingTop: PropTypes.string || PropTypes.number,
+  paddingBottom: PropTypes.string || PropTypes.number,
 };
 
 export default Icon;

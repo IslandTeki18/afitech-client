@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Icon from "../../atoms/icon/Icon";
 import Image from "../../atoms/image/Image";
+import Paragraph from "../../atoms/paragraph/Paragraph";
 
 const BlogDisplayCard = (props) => {
   return (
@@ -19,9 +20,9 @@ const BlogDisplayCard = (props) => {
         </div>
         <div className="col-md-8">
           <div className="card-body text-white">
-            <p className="card-text">
+            <Paragraph className="card-text">
               <small className="text-muted">{props.datePublished}</small>
-            </p>
+            </Paragraph>
             <h4 className="card-title fw-bold">{props.title}</h4>
             <Link
               to={props.link}
@@ -33,7 +34,7 @@ const BlogDisplayCard = (props) => {
                 icon="long-arrow-alt-right"
                 color="#ffffff"
                 size="30"
-                marginLeft="15"
+                paddingLeft="15"
               />
             </Link>
           </div>

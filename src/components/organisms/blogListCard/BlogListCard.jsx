@@ -1,5 +1,7 @@
 import "./BlogListCard.scss";
 import { Link } from "react-router-dom";
+import Image from "../../atoms/image/Image";
+import Paragraph from "../../atoms/paragraph/Paragraph";
 
 const BlogListCard = (props) => {
   // TODO: Make dynamic and reuseable
@@ -17,9 +19,9 @@ const BlogListCard = (props) => {
     <div className="dkBlogListCard card mb-3">
       <div className="row g-0">
         <div className="col-md-6 d-none d-md-block">
-          <img
+          <Image
             src={props.blog.img || "http://placehold.jp/500x300.png"}
-            alt={`blog-${props.blog.id}`}
+            imgAlt={`blog-${props.blog.title}`}
             className="card-img"
           />
         </div>
@@ -28,10 +30,12 @@ const BlogListCard = (props) => {
             {props.blog.type}
           </h6>
           <h3 className="mb-0">{props.blog.title}</h3>
-          <p className="text-muted mb-1">{props.blog.createdAt}</p>
-          <p className="mb-0 text-line-truncate">
+          <Paragraph className="text-muted mb-1">
+            {props.blog.createdAt}
+          </Paragraph>
+          <Paragraph className="mb-0 text-line-truncate">
             {props.blog.shortDescription}
-          </p>
+          </Paragraph>
           <Link
             to={`/blog/${props.blog._id}`}
             className="btn btn-secondary mt-auto continue-btn"
