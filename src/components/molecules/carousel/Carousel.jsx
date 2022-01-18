@@ -14,28 +14,6 @@ const Carousel = () => {
       className="carousel slide dkCarousel"
       data-bs-ride="carousel"
     >
-      <div className="carousel-indicators">
-        <Button
-          type="button"
-          data-bs-target="#carouselIndicators"
-          data-bs-slide-to="0"
-          className="active"
-          aria-current="true"
-          aria-label="image 1"
-        />
-        <Button
-          type="button"
-          data-bs-target="#carouselIndicators"
-          data-bs-slide-to="2"
-          aria-label="image 2"
-        />
-        <Button
-          type="button"
-          data-bs-target="#carouselIndicators"
-          data-bs-slide-to="3"
-          aria-label="image 3"
-        />
-      </div>
       <div className="carousel-inner">
         <div className="carousel-item active text-white">
           <Image
@@ -73,19 +51,19 @@ const Carousel = () => {
         <div className="img-overlay" />
       </div>
       <Button
-        className="carousel-control-prev"
+        className="btn carousel-control-prev"
         type="button"
-        data-bs-target="#carouselIndicators"
-        data-bs-slide="prev"
+        dataBSTarget="#carouselIndicators"
+        dataBSSlide="prev"
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
       </Button>
       <Button
-        className="carousel-control-next"
+        className="btn carousel-control-next"
         type="button"
-        data-bs-target="#carouselIndicators"
-        data-bs-slide="next"
+        dataBSTarget="#carouselIndicators"
+        dataBSSlide="next"
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>

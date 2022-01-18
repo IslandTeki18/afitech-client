@@ -22,7 +22,6 @@ const Button = (props) => {
 
 Button.propTypes = {
   className: PropTypes.string,
-  btnVariant: PropTypes.string.isRequired,
   type: PropTypes.string,
   onClick: PropTypes.func,
   id: PropTypes.string,
