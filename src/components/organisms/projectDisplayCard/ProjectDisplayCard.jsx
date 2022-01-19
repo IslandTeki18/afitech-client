@@ -3,6 +3,7 @@ import "./ProjectDisplayCard.scss";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import Image from "../../atoms/image/Image";
+import Paragraph from "../../atoms/paragraph/Paragraph";
 
 const ProjectDisplayCard = (props) => {
   return (
@@ -14,9 +15,9 @@ const ProjectDisplayCard = (props) => {
       />
       <div className="card-body">
         <h5 className="card-title">{props.projectTitle}</h5>
-        <p className="card-text line-clamp information-body">
+        <Paragraph className="card-text line-clamp information-body">
           {props.shortDescription}
-        </p>
+        </Paragraph>
         <Link to={props.link} className="btn btn-secondary text-uppercase">
           View Details
         </Link>

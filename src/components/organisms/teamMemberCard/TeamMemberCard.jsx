@@ -2,6 +2,7 @@ import React from "react";
 import "./TeamMemberCard.scss";
 import PropTypes from "prop-types";
 import Icon from "../../atoms/icon/Icon";
+import Paragraph from "../../atoms/paragraph/Paragraph";
 
 const TeamMemberCard = (props) => {
   // TODO: Find way to store this information and bring into component
@@ -38,7 +39,7 @@ const TeamMemberCard = (props) => {
       <div className="card-body">
         <h2 className="card-title">{props.name}</h2>
         <h4 className="card-subtitle">{props.position}</h4>
-        <p>{props.aboutEmployee}</p>
+        <Paragraph>{props.aboutEmployee}</Paragraph>
         <div className="row pt-4">{renderSocialMediaLinks()}</div>
       </div>
     </div>

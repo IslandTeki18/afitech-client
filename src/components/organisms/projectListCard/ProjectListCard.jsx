@@ -2,6 +2,8 @@ import React from "react";
 import "./ProjectListCard.scss";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import Image from "../../atoms/image/Image";
+import Paragraph from "../../atoms/paragraph/Paragraph";
 
 const ProjectListCard = (props) => {
   function renderProjectTags() {
@@ -14,10 +16,10 @@ const ProjectListCard = (props) => {
 
   return (
     <div className="dkProjectListCard card bg-lightDark">
-      <img
+      <Image
         src={props.image || "http://placehold.jp/500x300.png"}
         className="card-img-top"
-        alt={props.title}
+        imgAlt={props.title}
       />
       <div className="card-body bg-light">
         <div className="d-flex justify-content-between align-items-center">
@@ -28,9 +30,9 @@ const ProjectListCard = (props) => {
             {props.projectType}
           </h6>
         </div>
-        <p className="text-muted multiline-truncate">
+        <Paragraph className="text-muted multiline-truncate">
           {props.shortDescription}
-        </p>
+        </Paragraph>
         <hr />
         {props.projectTags && (
           <div className="row pb-4">{renderProjectTags()}</div>
