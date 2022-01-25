@@ -35,6 +35,7 @@ const ServiceDetailsPage = () => {
         {loading ? (
           <Loader />
         ) : (
+          service.serviceFeatures &&
           service.serviceFeatures.map((item, idx) => (
             <div className="col-sm-12 col-lg-6 mb-3" key={idx}>
               <h4 className="me-3">{item.title}</h4>

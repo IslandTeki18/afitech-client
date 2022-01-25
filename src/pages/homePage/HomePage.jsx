@@ -6,7 +6,7 @@ import { listBlogs } from "../../actions/blog.actions";
 import { listProjects } from "../../actions/project.actions";
 import { listTestimonials } from "../../actions/testimonial.actions";
 import { listServices } from "../../actions/service.actions";
-import Carousel from "../../components/molecules/carousel/Carousel";
+import MinimalHeroSection from "../../components/sections/heroSections/minimalHeroSection/MinimalHeroSection";
 import Icon from "../../components/atoms/icon/Icon";
 import ProjectDisplayCard from "../../components/organisms/projectDisplayCard/ProjectDisplayCard";
 import TestimonialCarousel from "../../components/organisms/testimonialCarousel/TestimonialCarousel";
@@ -142,9 +142,7 @@ const HomePage = () => {
   }
   return (
     <div className="dkHomePage">
-      <section id="heroSection">
-        <Carousel />
-      </section>
+      <MinimalHeroSection className="py-5" id="homeHeroSection" smallTitle="Welcome to afi tech" largeTitle="1 stop digital agency" />
       <section id="servicesSection" className="py-6">
         <div className="container">
           <div className="row">
