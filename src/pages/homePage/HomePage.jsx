@@ -6,13 +6,14 @@ import { listBlogs } from "../../actions/blog.actions";
 import { listProjects } from "../../actions/project.actions";
 import { listTestimonials } from "../../actions/testimonial.actions";
 import { listServices } from "../../actions/service.actions";
-import MinimalHeroSection from "../../components/sections/heroSections/minimalHeroSection/MinimalHeroSection";
 import Icon from "../../components/atoms/icon/Icon";
 import ProjectDisplayCard from "../../components/organisms/projectDisplayCard/ProjectDisplayCard";
 import TestimonialCarousel from "../../components/organisms/testimonialCarousel/TestimonialCarousel";
 import BlogDisplayCard from "../../components/organisms/blogDisplayCard/BlogDisplayCard";
 import Loader from "../../components/atoms/loader/Loader";
 import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
+import MinimalHeroSectionTwo from "../../components/sections/heroSections/minimalHeroSectionTwo/MinimalHeroSectionTwo";
+import blackSandImage from "../../assets/images/black-sand.jpg";
 
 const HomePage = () => {
   const history = useHistory();
@@ -142,7 +143,7 @@ const HomePage = () => {
   }
   return (
     <div className="dkHomePage">
-      <MinimalHeroSection className="py-5" id="homeHeroSection" smallTitle="Welcome to afi tech" largeTitle="1 stop digital agency" />
+      <MinimalHeroSectionTwo className="heroHeader" bgImage={blackSandImage} topHeader="AFI Technologies." bottomHeader="We design the future" />
       <section id="servicesSection" className="py-6">
         <div className="container">
           <div className="row">
