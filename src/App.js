@@ -1,5 +1,7 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { listServices } from "./actions/service.actions";
 import Header from "./app/header/Header";
 import Footer from "./app/footer/Footer";
 import OffcanvasBody from "./app/header/offcanvasBody/OffcanvasBody";
@@ -27,6 +29,15 @@ const ServiceDetailsPage = React.lazy(() =>
 );
 
 function App() {
+  const dispatch = useDispatch();
+  const serviceList = useSelector((state) => state.serviceList);
+  const { loading, error, services } = serviceList;
+
+  useEffect(() => {
+    if (!services) {
+      dispatch(listServices);
+    }
+  }, [services, dispatch]);
   return (
     <Router>
       <Suspense
@@ -39,7 +50,11 @@ function App() {
         }
       >
         <Header />
-        <OffcanvasBody />
+        {loading ? (
+          <Loader />
+        ) : (
+          <OffcanvasBody services={services} error={error} />
+        )}
         <Switch>
           <React.Fragment>
             <main className="flex-shrink-0">

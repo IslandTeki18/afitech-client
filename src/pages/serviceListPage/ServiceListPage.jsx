@@ -10,10 +10,12 @@ const ServiceListPage = () => {
   const dispatch = useDispatch();
   const serviceList = useSelector((state) => state.serviceList);
   const { loading, error, services } = serviceList;
+
   useEffect(() => {
     window.scrollTo(0, 0, "smooth");
     dispatch(listServices());
   }, [dispatch]);
+
   function serviceListItem() {
     return services
       .filter((service) => service.isAvailable)
