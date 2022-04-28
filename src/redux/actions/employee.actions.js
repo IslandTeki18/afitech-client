@@ -7,7 +7,7 @@ import {
     EMPLOYEE_DETAILS_FAIL,
   } from "../constants/employee.constants";
   import axios from "axios";
-  const serverUrl = process.env.NODE_ENV === "production" ? `${process.env.REACT_APP_HEROKU_URL}/api/employees` : "api/employees";
+  const serverUrl = process.env.NODE_ENV === "production" ? `${process.env.REACT_APP_HEROKU_URL}api/employees` : "api/employees";
   
   export const listEmployees = () => async (dispatch) => {
     try {

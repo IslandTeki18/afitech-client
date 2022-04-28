@@ -7,7 +7,7 @@ import {
   SERVICE_DETAILS_FAIL,
 } from "../constants/service.constants";
 import axios from "axios";
-const serverUrl = process.env.NODE_ENV === "production" ? `${process.env.REACT_APP_HEROKU_URL}/api/services` : "api/services";
+const serverUrl = process.env.NODE_ENV === "production" ? `${process.env.REACT_APP_HEROKU_URL}api/services` : "api/services";
 
 export const listServices = () => async (dispatch) => {
   try {

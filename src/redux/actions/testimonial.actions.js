@@ -9,7 +9,7 @@ import {
 import axios from "axios";
 const serverUrl =
   process.env.NODE_ENV === "production"
-    ? `${process.env.REACT_APP_HEROKU_URL}/api/testimonials`
+    ? `${process.env.REACT_APP_HEROKU_URL}api/testimonials`
     : "api/testimonials";
 
 export const listTestimonials = () => async (dispatch) => {
