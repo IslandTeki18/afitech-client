@@ -7,7 +7,7 @@ import {
     PROJECT_DETAILS_FAIL,
   } from "../constants/project.constants";
   import axios from "axios";
-  const serverUrl = "https://protected-oasis-46723.herokuapp.com/api/projects";
+  const serverUrl = process.env.NODE_ENV === "production" ? "https://protected-oasis-46723.herokuapp.com/api/projects" : "api/projects";
   
   export const listProjects = () => async (dispatch) => {
     try {

@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { listServices } from "./actions/service.actions";
+import { listServices } from "./redux/actions/service.actions";
 import Header from "./app/header/Header";
 import Footer from "./app/footer/Footer";
 import OffcanvasBody from "./app/header/offcanvasBody/OffcanvasBody";

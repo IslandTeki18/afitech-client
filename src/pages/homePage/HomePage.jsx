@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import "./HomePage.scss";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { listBlogs } from "../../actions/blog.actions";
-import { listProjects } from "../../actions/project.actions";
-import { listTestimonials } from "../../actions/testimonial.actions";
-import { listServices } from "../../actions/service.actions";
+import { listBlogs } from "../../redux/actions/blog.actions";
+import { listProjects } from "../../redux/actions/project.actions";
+import { listTestimonials } from "../../redux/actions/testimonial.actions";
+import { listServices } from "../../redux/actions/service.actions";
 import Icon from "../../components/atoms/icon/Icon";
 import ProjectDisplayCard from "../../components/organisms/projectDisplayCard/ProjectDisplayCard";
 import TestimonialCarousel from "../../components/organisms/testimonialCarousel/TestimonialCarousel";
@@ -48,6 +48,7 @@ const HomePage = () => {
   }, [dispatch]);
 
   function renderProjectDisplayCards() {
+    if (!projects) return;
     return (
       <div className="row">
         {projectError && (
@@ -78,6 +79,7 @@ const HomePage = () => {
   }
 
   function renderServiceNavigationList() {
+    if (!services) return;
     return (
       <div className="col-md-6">
         <ul className="list-group list-group-flush">
@@ -118,6 +120,7 @@ const HomePage = () => {
   }
 
   function renderBlogPostList() {
+    if (!blogs) return;
     return (
       <div className="col-md-8">
         {blogError && <AlertBanner variant="danger">{blogError}</AlertBanner>}
@@ -143,7 +146,12 @@ const HomePage = () => {
   }
   return (
     <div className="dkHomePage">
-      <MinimalHeroSectionTwo className="heroHeader" bgImage={blackSandImage} topHeader="AFI Technologies." bottomHeader="We design the future" />
+      <MinimalHeroSectionTwo
+        className="heroHeader"
+        bgImage={blackSandImage}
+        topHeader="AFI Technologies."
+        bottomHeader="We design the future"
+      />
       <section id="servicesSection" className="py-6">
         <div className="container">
           <div className="row">

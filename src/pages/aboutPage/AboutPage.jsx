@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./AboutPage.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { listEmployees } from "../../actions/employee.actions";
+import { listEmployees } from "../../redux/actions/employee.actions";
 import Loader from "../../components/atoms/loader/Loader";
 import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 import ContactForm from "../../components/organisms/contactForm/ContactForm";

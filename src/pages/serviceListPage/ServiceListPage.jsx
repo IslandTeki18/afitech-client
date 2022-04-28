@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./ServiceListPage.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { listServices } from "../../actions/service.actions";
+import { listServices } from "../../redux/actions/service.actions";
 import { Link } from "react-router-dom";
 import Loader from "../../components/atoms/loader/Loader";
 import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";

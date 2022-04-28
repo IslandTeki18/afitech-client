@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./ProjectDetailsPage.scss";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { detailProject } from "../../actions/project.actions";
+import { detailProject } from "../../redux/actions/project.actions";
 import Carousel from "../../components/molecules/carousel/Carousel";
 import Icon from "../../components/atoms/icon/Icon";
 import Loader from "../../components/atoms/loader/Loader";

@@ -4,20 +4,23 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import {
   projectDetailsReducer,
   projectListReducer,
-} from "../reducers/project.reducers";
-import { blogDetailsReducer, blogListReducer } from "../reducers/blog.reducers";
+} from "../redux/reducers/project.reducers";
+import {
+  blogDetailsReducer,
+  blogListReducer,
+} from "../redux/reducers/blog.reducers";
 import {
   testimonialDetailsReducer,
   testimonialListReducer,
-} from "../reducers/testimonial.reducers";
+} from "../redux/reducers/testimonial.reducers";
 import {
   serviceDetailsReducer,
   serviceListReducer,
-} from "../reducers/service.reducers";
+} from "../redux/reducers/service.reducers";
 import {
-    employeeDetailsReducer,
-    employeeListReducer,
-  } from "../reducers/employee.reducers";
+  employeeDetailsReducer,
+  employeeListReducer,
+} from "../redux/reducers/employee.reducers";
 
 const reducer = combineReducers({
   projectList: projectListReducer,

@@ -7,7 +7,7 @@ import {
     EMPLOYEE_DETAILS_FAIL,
   } from "../constants/employee.constants";
   import axios from "axios";
-  const serverUrl = "https://protected-oasis-46723.herokuapp.com/api/employees";
+  const serverUrl = process.env.NODE_ENV === "production" ? "https://protected-oasis-46723.herokuapp.com/api/employees" : "api/employees";
   
   export const listEmployees = () => async (dispatch) => {
     try {

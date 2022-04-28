@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./BlogListPage.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { listBlogs } from "../../actions/blog.actions";
+import { listBlogs } from "../../redux/actions/blog.actions";
 import BlogListCard from "../../components/organisms/blogListCard/BlogListCard";
 import BlogSideBar from "../../components/organisms/blogSideBar/BlogSideBar";
 import Loader from "../../components/atoms/loader/Loader";

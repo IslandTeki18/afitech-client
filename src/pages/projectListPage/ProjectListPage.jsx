@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { listProjects } from "../../actions/project.actions";
+import { listProjects } from "../../redux/actions/project.actions";
 import { useDispatch, useSelector } from "react-redux";
 import ProjectListCard from "../../components/organisms/projectListCard/ProjectListCard";
 import Loader from "../../components/atoms/loader/Loader";
