@@ -7,7 +7,7 @@ import {
     BLOG_DETAILS_FAIL,
   } from "../constants/blog.constants";
   import axios from "axios";
-  const serverUrl = process.env.NODE_ENV === "production" ? "https://protected-oasis-46723.herokuapp.com/api/blogs" : "api/blogs";
+  const serverUrl = process.env.NODE_ENV === "production" ? `${process.env.REACT_APP_HEROKU_URL}/api/blogs` : "api/blogs";
   
   export const listBlogs = () => async (dispatch) => {
     try {
