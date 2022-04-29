@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { listServices } from "./redux/actions/service.actions";
 import Header from "./app/header/Header";
 import Footer from "./app/footer/Footer";
-import OffcanvasBody from "./app/header/offcanvasBody/OffcanvasBody";
 import Loader from "./components/atoms/loader/Loader";
+import AlertBanner from "./components/molecules/alertBanner/AlertBanner";
 const AboutPage = React.lazy(() => import("./pages/aboutPage/AboutPage"));
 const BlogListPage = React.lazy(() =>
   import("./pages/blogListPage/BlogListPage")
@@ -31,7 +31,7 @@ const ServiceDetailsPage = React.lazy(() =>
 function App() {
   const dispatch = useDispatch();
   const serviceList = useSelector((state) => state.serviceList);
-  const { loading, error, services } = serviceList;
+  const { error, services } = serviceList;
 
   useEffect(() => {
     if (!services) {
@@ -50,14 +50,11 @@ function App() {
         }
       >
         <Header />
-        {loading ? (
-          <Loader />
-        ) : (
-          <OffcanvasBody services={services} error={error} />
-        )}
+        
         <Switch>
           <React.Fragment>
             <main className="flex-shrink-0">
+              {error && <AlertBanner variant="danger">{error}</AlertBanner>}
               <Route path="/about" component={AboutPage} />
               <Route path="/blogs" component={BlogListPage} />
               <Route exact path="/blog/:id" component={BlogDetailsPage} />

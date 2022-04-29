@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "../../atoms/button/Button";
+import PropTypes from 'prop-types'
 
 const AlertBanner = (props) => {
   return (
@@ -23,5 +24,10 @@ const AlertBanner = (props) => {
     </div>
   );
 };
+
+AlertBanner.propTypes = {
+  variant: PropTypes.string,
+  isDismissable: PropTypes.bool
+}
 
 export default AlertBanner;
