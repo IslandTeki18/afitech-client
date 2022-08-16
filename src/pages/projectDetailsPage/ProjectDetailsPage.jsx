@@ -13,6 +13,7 @@ const ProjectDetailsPage = () => {
   const dispatch = useDispatch();
   const projectDetails = useSelector((state) => state.projectDetails);
   const { loading, error, project } = projectDetails;
+  
   useEffect(() => {
     window.scrollTo(0, 0, "smooth");
     dispatch(detailProject(id));

@@ -47,203 +47,67 @@ const HomePage = () => {
     dispatch(listServices());
   }, [dispatch]);
 
-  function renderProjectDisplayCards() {
-    if (!projects) return;
-    return (
-      <div className="row">
-        {projectError && (
-          <AlertBanner variant="danger">{projectError}</AlertBanner>
-        )}
-        {projectLoading ? (
-          <Loader />
-        ) : (
-          projects
-            .filter((project) => project.isPublished)
-            .map((project, idx) => (
-              <div
-                className="mobile-padding-bottom col-md-6 col-lg-4 mt-md-4 d-flex justify-content-center"
-                key={idx}
-              >
-                <ProjectDisplayCard
-                  projectImg={project.projectImg}
-                  imgAlt={project.title}
-                  projectTitle={project.title}
-                  shortDescription={project.shortDescription}
-                  link={`/project/${project._id}`}
-                />
-              </div>
-            ))
-        )}
+  function renderServices() {
+    if (!services || serviceLoading) {
+      return <Loader />;
+    }
+    return services.map((item, idx) => (
+      <div className="col-md-4 text-center displayServiceCard" key={idx}>
+        <img
+          src="https://via.placeholder.com/150x150"
+          alt="service icon"
+          width={150}
+          height={150}
+        />
+        <h3>{item.title}</h3>
+        <p className="text-muted">{item.shortDescription}</p>
       </div>
-    );
-  }
-
-  function renderServiceNavigationList() {
-    if (!services) return;
-    return (
-      <div className="col-md-6">
-        <ul className="list-group list-group-flush">
-          {serviceError && (
-            <AlertBanner variant="danger">{serviceError}</AlertBanner>
-          )}
-          {serviceLoading ? (
-            <div className="d-flex justify-content-center align-items-center">
-              <Loader />
-            </div>
-          ) : (
-            services
-              .filter((service) => service.isAvailable)
-              .map((item, idx) => (
-                <div className="border-bottom py-3" key={idx}>
-                  <Link
-                    type="button"
-                    className="list-group-item d-flex justify-content-between align-items-center w-100"
-                    style={{ border: "unset" }}
-                    aria-current="true"
-                    disabled={item.isAvailable}
-                    to={`/service/${item._id}`}
-                  >
-                    {item.title}
-                    <Icon
-                      icon="long-arrow-alt-right"
-                      iconStyle="fas"
-                      color={item.isAvailable ? "lightgrey" : "#000000"}
-                      size="20"
-                    />
-                  </Link>
-                </div>
-              ))
-          )}
-        </ul>
-      </div>
-    );
-  }
-
-  function renderBlogPostList() {
-    if (!blogs) return;
-    return (
-      <div className="col-md-8">
-        {blogError && <AlertBanner variant="danger">{blogError}</AlertBanner>}
-        {blogLoading ? (
-          <Loader />
-        ) : (
-          blogs
-            .filter((blog) => blog.isPublished === true)
-            .map((item, idx) => (
-              <div className="py-4" key={idx}>
-                <BlogDisplayCard
-                  img={item.image}
-                  imgAlt={`blog-${idx}`}
-                  title={item.title}
-                  link={`/blog/${item._id}`}
-                  datePublished={item.updatedAt}
-                />
-              </div>
-            ))
-        )}
-      </div>
-    );
+    ));
   }
   return (
     <div className="dkHomePage">
-      <MinimalHeroSectionTwo
-        className="heroHeader"
-        bgImage={blackSandImage}
-        topHeader="AFI Technologies."
-        bottomHeader="We design the future"
-      />
-      <section id="servicesSection" className="py-6">
+      <section id="heroSection">
         <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <h5 className="pb-3">our services</h5>
-              <h1 className="pb-2">
-                We create everything from scratch with the latest technologoy
-                that will be around for years{" "}
-                <Icon iconStyle="fas" color="red" size="30" icon="fire" />
+          <div className="row align-items-center">
+            <div className="col-md-7">
+              <h6 className="text-uppercase">we create ideas</h6>
+              <h1 className="text-uppercase">
+                how we can help your
+                <span className="text-primary ms-2">business</span>
               </h1>
-              <h4 className="pb-4">
-                We build small and medium size mobile and web applications. From
-                planning, design, development, deployment, and maintence, we
-                keep our code base scalable, secure, and readable.
-              </h4>
-              <button
-                className="btn btn-primary"
-                onClick={() => history.push("/services")}
-              >
-                all services
-              </button>
+              <p className="text-muted">
+                AFI TECH is a web development agency aimed to simplify the web
+                development process and provide a simple solution for your
+                business that gets the job done.
+              </p>
+              <button className="btn btn-primary">Learn More</button>
             </div>
-            {renderServiceNavigationList()}
+            <div className="col-md-5">
+              <img
+                src="https://via.placeholder.com/500x400"
+                alt="placeholder"
+              />
+            </div>
           </div>
         </div>
       </section>
-      <section id="recentProjectsSection" className="bg-dark py-3">
+      <section id="serviceSection">
         <div className="container">
-          <h2 className="text-white mobile-padding-center">Recent Projects</h2>
-          {renderProjectDisplayCards()}
-          <div className="text-center mt-4">
-            <Link className="btn btn-secondary text-uppercase" to="/projects">
-              All Work
-            </Link>
+          <div className="section-head text-center">
+            <h6 className="text-muted text-uppercase">services</h6>
+            <h2 className="text-uppercase">Provide Fire Service</h2>
           </div>
+          <div className="row mt-5">{renderServices()}</div>
         </div>
       </section>
-      <section id="testimonialSection" className="py-6">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <h5>our clients</h5>
-              <h3>What our clients say about us</h3>
-            </div>
-            <div className="col-md-8">
-              {testimonialError && (
-                <AlertBanner variant="danger">{testimonialError}</AlertBanner>
-              )}
-              {testimonialLoading ? (
-                <Loader />
-              ) : (
-                <TestimonialCarousel testimonials={testimonials} />
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="blogSection" className="bg-dark py-6">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4 text-white">
-              <h1 className="display-4">What's New?</h1>
-              <Link
-                to="/blogs"
-                className="btn btn-secondary mt-5 text-uppercase"
-              >
-                All Posts
-              </Link>
-            </div>
-            {renderBlogPostList()}
-          </div>
-        </div>
-      </section>
-      <section id="connectSection" className="py-6">
-        <div className="container py-6">
-          <div className="row d-flex align-items-center">
-            <div className="col-md-8">
-              <h1 className="display-1 text-uppercase">Let's work together!</h1>
-            </div>
-            <div className="col-md-4">
-              <Link to="/contact" className="btn btn-link">
-                <Icon
-                  iconStyle="fas"
-                  icon="long-arrow-alt-right"
-                  color="#000000"
-                  size="60"
-                />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section id="aboutUsSection"></section>
+      <section id="portfolioSection"></section>
+      <section id="newsletterSection"></section>
+      <section id="teamSection"></section>
+      <section id="pricingSection"></section>
+      <section id="testimonialSection"></section>
+      <section id="blogSection"></section>
+      <section id="blogSection"></section>
     </div>
   );
 };
