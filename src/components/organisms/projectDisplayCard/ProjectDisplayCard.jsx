@@ -2,10 +2,9 @@ import React from "react";
 import "./ProjectDisplayCard.scss";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Image from "../../atoms/image/Image";
-import Paragraph from "../../atoms/paragraph/Paragraph";
+import { Image, Paragraph } from "../../atoms";
 
-const ProjectDisplayCard = (props) => {
+export const ProjectDisplayCard = (props) => {
   return (
     <div className="dkProjectDisplayCard card border-0">
       <Image
@@ -36,5 +35,3 @@ ProjectDisplayCard.propTypes = {
   link: PropTypes.string.isRequired,
   projectImg: PropTypes.string.isRequired,
 };
-
-export default ProjectDisplayCard;

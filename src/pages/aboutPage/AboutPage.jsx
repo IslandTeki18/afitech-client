@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import "./AboutPage.scss";
+import {
+  AlertBanner,
+  Loader,
+  ContactForm,
+  TeamMemberCard,
+} from "../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { listEmployees } from "../../redux/actions/employee.actions";
-import Loader from "../../components/atoms/loader/Loader";
-import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
-import ContactForm from "../../components/organisms/contactForm/ContactForm";
-import TeamMemberCard from "../../components/organisms/teamMemberCard/TeamMemberCard";
 
 const AboutPage = () => {
   const dispatch = useDispatch();

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Loader = () => {
+export const Loader = () => {
   return (
     <div className="dkLoader">
       <div className="spinner-border" role="status">
@@ -9,5 +9,3 @@ const Loader = () => {
     </div>
   );
 };
-
-export default Loader;

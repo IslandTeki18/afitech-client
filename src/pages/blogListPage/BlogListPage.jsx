@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import "./BlogListPage.scss";
+import {
+  Loader,
+  BlogListCard,
+  BlogSideBar,
+  AlertBanner,
+} from "../../components";
 import { useDispatch, useSelector } from "react-redux";
 import { listBlogs } from "../../redux/actions/blog.actions";
-import BlogListCard from "../../components/organisms/blogListCard/BlogListCard";
-import BlogSideBar from "../../components/organisms/blogSideBar/BlogSideBar";
-import Loader from "../../components/atoms/loader/Loader";
-import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const BlogListPage = () => {
   const dispatch = useDispatch();

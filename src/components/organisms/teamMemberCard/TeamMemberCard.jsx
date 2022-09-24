@@ -1,10 +1,9 @@
 import React from "react";
 import "./TeamMemberCard.scss";
 import PropTypes from "prop-types";
-import Icon from "../../atoms/icon/Icon";
-import Paragraph from "../../atoms/paragraph/Paragraph";
+import { Icon, Paragraph } from "../../atoms";
 
-const TeamMemberCard = (props) => {
+export const TeamMemberCard = (props) => {
   // TODO: Find way to store this information and bring into component
   // TODO: Make more robust and dynamic
 
@@ -51,5 +50,3 @@ TeamMemberCard.propTypes = {
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
 };
-
-export default TeamMemberCard;

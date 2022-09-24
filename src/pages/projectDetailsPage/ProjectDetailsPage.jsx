@@ -3,17 +3,14 @@ import "./ProjectDetailsPage.scss";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailProject } from "../../redux/actions/project.actions";
-import Carousel from "../../components/molecules/carousel/Carousel";
-import Icon from "../../components/atoms/icon/Icon";
-import Loader from "../../components/atoms/loader/Loader";
-import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
+import { Loader, Carousel, Icon, AlertBanner } from "../../components";
 
 const ProjectDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const projectDetails = useSelector((state) => state.projectDetails);
   const { loading, error, project } = projectDetails;
-  
+
   useEffect(() => {
     window.scrollTo(0, 0, "smooth");
     dispatch(detailProject(id));

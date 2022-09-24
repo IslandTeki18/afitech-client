@@ -1,8 +1,8 @@
 import React from "react";
-import Button from "../../atoms/button/Button";
+import { Button } from "../../atoms";
 import PropTypes from 'prop-types'
 
-const AlertBanner = (props) => {
+export const AlertBanner = (props) => {
   return (
     <div className="dkAlertBanner">
       <div
@@ -29,5 +29,3 @@ AlertBanner.propTypes = {
   variant: PropTypes.string,
   isDismissable: PropTypes.bool
 }
-
-export default AlertBanner;

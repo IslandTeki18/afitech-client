@@ -1,10 +1,8 @@
 import React from "react";
 import "./Carousel.scss";
-import Button from "../../atoms/button/Button";
-import Image from "../../atoms/image/Image";
-import Paragraph from "../../atoms/paragraph/Paragraph";
+import { Button, Image, Paragraph } from "../../atoms";
 
-const Carousel = () => {
+export const Carousel = () => {
   // TODO: Make more dynamic
   // TODO: Make Responsive
   // TODO: Update Carousel Captions
@@ -24,7 +22,9 @@ const Carousel = () => {
           />
           <div className="carousel-caption d-none d-md-block z-1">
             <h5>First Slide</h5>
-            <Paragraph>Some representative placeholder content for the third slide.</Paragraph>
+            <Paragraph>
+              Some representative placeholder content for the third slide.
+            </Paragraph>
           </div>
         </div>
         <div className="carousel-item">
@@ -35,7 +35,9 @@ const Carousel = () => {
           />
           <div className="carousel-caption d-none d-md-block z-1">
             <h5>Second Slide</h5>
-            <Paragraph>Some representative placeholder content for the third slide.</Paragraph>
+            <Paragraph>
+              Some representative placeholder content for the third slide.
+            </Paragraph>
           </div>
         </div>
         <div className="carousel-item">
@@ -46,7 +48,9 @@ const Carousel = () => {
           />
           <div className="carousel-caption d-none d-md-block z-1">
             <h5>Third Slide</h5>
-            <Paragraph>Some representative placeholder content for the third slide.</Paragraph>
+            <Paragraph>
+              Some representative placeholder content for the third slide.
+            </Paragraph>
           </div>
         </div>
         <div className="img-overlay" />
@@ -72,5 +76,3 @@ const Carousel = () => {
     </div>
   );
 };
-
-export default Carousel;

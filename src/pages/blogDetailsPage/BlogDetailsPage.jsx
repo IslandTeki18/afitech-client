@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import parse from "html-react-parser";
 import "./BlogDetailsPage.scss";
-import BlogSideBar from "../../components/organisms/blogSideBar/BlogSideBar";
+import { BlogSideBar, Loader, AlertBanner } from "../../components";
+import parse from "html-react-parser";
 import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailBlog } from "../../redux/actions/blog.actions";
-import Loader from "../../components/atoms/loader/Loader";
-import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
 
 const BlogDetailsPage = () => {
   const { id } = useParams();

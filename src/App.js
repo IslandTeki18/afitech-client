@@ -4,8 +4,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { listServices } from "./redux/actions/service.actions";
 import Header from "./app/header/Header";
 import Footer from "./app/footer/Footer";
-import Loader from "./components/atoms/loader/Loader";
-import AlertBanner from "./components/molecules/alertBanner/AlertBanner";
+import { Loader, AlertBanner } from "./components";
+
 const AboutPage = React.lazy(() => import("./pages/aboutPage/AboutPage"));
 const BlogListPage = React.lazy(() =>
   import("./pages/blogListPage/BlogListPage")
@@ -50,16 +50,16 @@ function App() {
         }
       >
         <Header />
-        
+
         <Switch>
           <React.Fragment>
             <main className="flex-shrink-0">
               {error && <AlertBanner variant="danger">{error}</AlertBanner>}
+              <Route exact path="/" component={HomePage} />
               <Route path="/about" component={AboutPage} />
+              <Route path="/contact" component={ContactPage} />
               <Route path="/blogs" component={BlogListPage} />
               <Route exact path="/blog/:id" component={BlogDetailsPage} />
-              <Route path="/contact" component={ContactPage} />
-              <Route exact path="/" component={HomePage} />
               <Route path="/projects" component={ProjectListPage} />
               <Route exact path="/project/:id" component={ProjectDetailsPage} />
               <Route path="/services" component={ServiceListPage} />

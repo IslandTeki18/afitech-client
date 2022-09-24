@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Image = (props) => {
+export const Image = (props) => {
   return (
       <img
       id={props.id}
@@ -28,5 +28,3 @@ Image.propTypes = {
   imgWidth: PropTypes.string || PropTypes.number,
   id: PropTypes.string
 };
-
-export default Image;

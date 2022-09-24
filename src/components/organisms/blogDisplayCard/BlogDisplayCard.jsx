@@ -2,11 +2,9 @@ import React from "react";
 import "./BlogDisplayCard.scss";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Icon from "../../atoms/icon/Icon";
-import Image from "../../atoms/image/Image";
-import Paragraph from "../../atoms/paragraph/Paragraph";
+import { Paragraph, Image, Icon } from "../../atoms";
 
-const BlogDisplayCard = (props) => {
+export const BlogDisplayCard = (props) => {
   return (
     <div className="dkBlogDisplayCard card border-0 bg-dark">
       <div className="row g-0">
@@ -54,5 +52,3 @@ BlogDisplayCard.propTypes = {
   title: PropTypes.string.isRequired,
   datePublished: PropTypes.string.isRequired,
 };
-
-export default BlogDisplayCard;

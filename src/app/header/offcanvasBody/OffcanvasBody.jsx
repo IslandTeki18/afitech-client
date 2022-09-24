@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AlertBanner from "../../../components/molecules/alertBanner/AlertBanner";
+import { AlertBanner } from "../../../components";
 import "./OffcanvasBody.scss";
 
 const OffcanvasBody = (props) => {

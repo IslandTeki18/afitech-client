@@ -3,10 +3,9 @@ import "./BlogSideBar.scss";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { blogTags } from "../../../utils/testData";
-import Image from "../../atoms/image/Image";
-import Paragraph from "../../atoms/paragraph/Paragraph";
+import {Image, Paragraph} from "../../atoms"
 
-const BlogSideBar = (props) => {
+export const BlogSideBar = (props) => {
   // TODO: User Details Action
   function renderTagButtons() {
     return blogTags.map((item) => (
@@ -47,5 +46,3 @@ BlogSideBar.propTypes = {
   description: PropTypes.string,
   tags: PropTypes.array,
 };
-
-export default BlogSideBar;

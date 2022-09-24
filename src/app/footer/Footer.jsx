@@ -1,7 +1,7 @@
 import React from "react";
 import "./Footer.scss";
 import { Link } from "react-router-dom";
-import Icon from "../../components/atoms/icon/Icon";
+import { Icon } from "../../components";
 
 const Footer = () => {
     const serviceNavItems = {

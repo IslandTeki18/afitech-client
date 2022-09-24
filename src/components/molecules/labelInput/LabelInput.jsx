@@ -1,10 +1,9 @@
 import React from "react";
 import "./LabelInput.scss";
 import PropTypes from "prop-types";
-import Input from "../../atoms/input/Input";
-import Label from "../../atoms/label/Label";
+import { Label, Input } from "../../atoms";
 
-const LabelInput = (props) => {
+export const LabelInput = (props) => {
   return (
     <div className="dkLabelInput">
       {props.label && (
@@ -38,5 +37,3 @@ LabelInput.propTypes = {
   inputClassName: PropTypes.string,
   callback: PropTypes.func.isRequired,
 };
-
-export default LabelInput;

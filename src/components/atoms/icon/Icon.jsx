@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Icon = (props) => {
+export const Icon = (props) => {
   function renderFontAwesomeStyle(style) {
     switch (style) {
       case "fas":
@@ -57,5 +57,3 @@ Icon.propTypes = {
   paddingTop: PropTypes.string || PropTypes.number,
   paddingBottom: PropTypes.string || PropTypes.number,
 };
-
-export default Icon;

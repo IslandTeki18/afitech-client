@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import "./ContactPage.scss";
-import Icon from "../../components/atoms/icon/Icon";
-import ContactForm from "../../components/organisms/contactForm/ContactForm";
+import { Icon, ContactForm } from "../../components";
 
 const ContactPage = () => {
   useEffect(() => {

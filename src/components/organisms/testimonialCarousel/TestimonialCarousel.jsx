@@ -1,9 +1,9 @@
 import React from "react";
 import "./TestimonialCarousel.scss";
 import PropTypes from "prop-types";
-import Icon from "../../atoms/icon/Icon";
+import { Icon } from "../../atoms";
 
-const TestimonialCarousel = (props) => {
+export const TestimonialCarousel = (props) => {
   return (
     <div
       id="testimonialCarouselControls"
@@ -12,36 +12,37 @@ const TestimonialCarousel = (props) => {
       data-bs-interval="false"
     >
       <div className="carousel-inner">
-        {props.testimonials && props.testimonials.map((item, idx) => (
-          <div
-            className={`carousel-item${item.isActive ? " active" : ""}`}
-            key={idx}
-          >
-            <div className="card mb-3">
-              <div className="row g-0">
-                <div className="col-md-4">
-                  <img
-                    src={item.image || "http://placehold.jp/500x300.png"}
-                    className="w-100 carousel-image rounded-start"
-                    alt={item.name}
-                  />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h4 className="card-title">{item.name}</h4>
-                    <p className="card-text">{item.testimonial}</p>
-                    <p className="card-text">
-                      <small className="text-muted">
-                        {item.clientCompanyPosition} -{item.companyName} -
-                        {item.companyLocation}
-                      </small>
-                    </p>
+        {props.testimonials &&
+          props.testimonials.map((item, idx) => (
+            <div
+              className={`carousel-item${item.isActive ? " active" : ""}`}
+              key={idx}
+            >
+              <div className="card mb-3">
+                <div className="row g-0">
+                  <div className="col-md-4">
+                    <img
+                      src={item.image || "http://placehold.jp/500x300.png"}
+                      className="w-100 carousel-image rounded-start"
+                      alt={item.name}
+                    />
+                  </div>
+                  <div className="col-md-8">
+                    <div className="card-body">
+                      <h4 className="card-title">{item.name}</h4>
+                      <p className="card-text">{item.testimonial}</p>
+                      <p className="card-text">
+                        <small className="text-muted">
+                          {item.clientCompanyPosition} -{item.companyName} -
+                          {item.companyLocation}
+                        </small>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
       <button
         className="btn btn-link me-2"
@@ -77,5 +78,3 @@ const TestimonialCarousel = (props) => {
 TestimonialCarousel.propTypes = {
   testimonials: PropTypes.array.isRequired,
 };
-
-export default TestimonialCarousel;

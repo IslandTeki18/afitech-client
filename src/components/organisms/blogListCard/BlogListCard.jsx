@@ -1,9 +1,8 @@
 import "./BlogListCard.scss";
 import { Link } from "react-router-dom";
-import Image from "../../atoms/image/Image";
-import Paragraph from "../../atoms/paragraph/Paragraph";
+import { Paragraph, Image } from "../../atoms";
 
-const BlogListCard = (props) => {
+export const BlogListCard = (props) => {
   // TODO: Make dynamic and reuseable
   function renderBlogType(type) {
     switch (type) {
@@ -47,5 +46,3 @@ const BlogListCard = (props) => {
     </div>
   );
 };
-
-export default BlogListCard;

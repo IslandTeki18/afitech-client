@@ -4,10 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { detailService } from "../../redux/actions/service.actions";
 import { listProjects } from "../../redux/actions/project.actions";
-import Icon from "../../components/atoms/icon/Icon";
-import ProjectListCard from "../../components/organisms/projectListCard/ProjectListCard";
-import Loader from "../../components/atoms/loader/Loader";
-import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
+import { Loader, Icon, ProjectListCard, AlertBanner } from "../../components";
 
 const ServiceDetailsPage = () => {
   const dispatch = useDispatch();

@@ -2,10 +2,9 @@ import React from "react";
 import "./ProjectListCard.scss";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-import Image from "../../atoms/image/Image";
-import Paragraph from "../../atoms/paragraph/Paragraph";
+import { Image, Paragraph } from "../../atoms";
 
-const ProjectListCard = (props) => {
+export const ProjectListCard = (props) => {
   function renderProjectTags() {
     return props.projectTags.map((item, idx) => (
       <div className="col" key={idx}>
@@ -52,5 +51,3 @@ ProjectListCard.propTypes = {
   projectType: PropTypes.string,
   link: PropTypes.string,
 };
-
-export default ProjectListCard;

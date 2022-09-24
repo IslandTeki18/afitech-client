@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import LabelInput from "../../molecules/labelInput/LabelInput";
+import { LabelInput } from "../../molecules";
 
-const ContactForm = (props) => {
+export const ContactForm = (props) => {
     function callBackData() {
         if (!props.collectData()) return;
         if (!props.formData) return;
@@ -93,5 +93,3 @@ ContactForm.propTypes = {
     collectData: PropTypes.func,
     formData: PropTypes.object,
 };
-
-export default ContactForm;

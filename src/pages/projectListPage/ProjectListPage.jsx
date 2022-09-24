@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import { listProjects } from "../../redux/actions/project.actions";
 import { useDispatch, useSelector } from "react-redux";
-import ProjectListCard from "../../components/organisms/projectListCard/ProjectListCard";
-import Loader from "../../components/atoms/loader/Loader";
-import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
+import { Loader, ProjectListCard, AlertBanner } from "../../components";
 
 const ProjectListPage = () => {
   const dispatch = useDispatch();

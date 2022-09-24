@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Button = (props) => {
+export const Button = (props) => {
   return (
     <button
       id={props.id}
@@ -32,5 +32,3 @@ Button.propTypes = {
   ariaCurrent: PropTypes.string,
   ariaLabel: PropTypes.string,
 };
-
-export default Button;

@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Input = (props) => {
+export const Input = (props) => {
   return (
     <input
       type={props.type}
@@ -46,5 +46,3 @@ Input.propTypes = {
   onClick: PropTypes.func,
   required: PropTypes.bool,
 };
-
-export default Input;

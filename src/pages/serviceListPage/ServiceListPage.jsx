@@ -3,8 +3,7 @@ import "./ServiceListPage.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { listServices } from "../../redux/actions/service.actions";
 import { Link } from "react-router-dom";
-import Loader from "../../components/atoms/loader/Loader";
-import AlertBanner from "../../components/molecules/alertBanner/AlertBanner";
+import { Loader, AlertBanner } from "../../components";
 
 const ServiceListPage = () => {
   const dispatch = useDispatch();
