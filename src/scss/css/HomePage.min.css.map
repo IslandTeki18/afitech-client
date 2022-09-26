@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,WADO,CACP,KAAK,AAAC,CACF,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACvB,AACD,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,EALvC,AAMQ,WANG,CAMH,sBAAsB,AAAC,CACnB,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACvB,AAVT,AAWQ,WAXG,CAWH,sBAAsB,AAAC,CACnB,cAAc,CAAE,IAAI,CACvB",
-    "sources": [
-        "../../pages/homePage/HomePage.scss"
-    ],
-    "names": [],
-    "file": "HomePage.min.css"
-}

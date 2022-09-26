@@ -1,0 +1,37 @@
+
+$white: #fff;
+$gray-100: #f1f1f1;
+$gray-200: #d4d4d4;
+$gray-300: #b8b8b8;
+$gray-400: #9c9c9c;
+$gray-500: #808080;
+$gray-600: #636363;
+$gray-700: #474747;
+$gray-800: #2a2a2a;
+$gray-900: #0e0e0e;
+$black: #000;
+$blue: #003fb5;
+$indigo: #5427f5;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #d33636;
+$orange: #ee8128;
+$yellow: #fcdb49;
+$green: #2aa13e;
+$teal: #20c997;
+$cyan: #268bd2;
+$primary: #dfa804;
+$secondary: #7b289c;
+$success: #289e31;
+$info: #75b5e2;
+$warning: #eeeb4d;
+$danger: #b82525;
+$light: #fdf6e3;
+$dark: #212729;
+$gray-dark: #2c3335;
+$body-color: #636363;
+$dropdown-link-color: #636363;
+$dropdown-link-hover-color: rgba(255,255,255,.75);
+$dropdown-link-hover-bg: #636363;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

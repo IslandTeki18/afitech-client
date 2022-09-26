@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AACA,AACI,kBADc,CACd,mBAAmB,AAAC,CAChB,OAAO,CAAE,WAAW,CACpB,kBAAkB,CAAE,CAAC,CACrB,kBAAkB,CAAE,QAAQ,CAC5B,QAAQ,CAAE,MAAM,CACnB",
-    "sources": [
-        "../../components/projectListCard/ProjectListCard.scss"
-    ],
-    "names": [],
-    "file": "ProjectListCard.min.css"
-}

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,qBADiB,CACjB,GAAG,AAAC,CACA,cAAc,CAAE,MAAM,CACtB,YAAY,CAAE,IAAI,CACrB,AAJL,AAKI,qBALiB,CAKjB,UAAU,AAAC,CACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CACX,UAAU,CAAE,KAAK,CACjB,eAAe,CAAE,OAAO,CAC3B",
-    "sources": [
-        "../../pages/serviceDetailsPage/ServiceDetailsPage.scss"
-    ],
-    "names": [],
-    "file": "ServiceDetailsPage.min.css"
-}

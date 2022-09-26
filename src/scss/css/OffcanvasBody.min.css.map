@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,gBADY,CACZ,UAAU,AAAC,CACP,KAAK,CAAE,OAAO,CACjB,AAEL,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK,EAC/B,AAAA,cAAc,AAAC,CACX,KAAK,CAAE,IAAI,CACX,WAAW,CAAE,KAAK,CACrB",
-    "sources": [
-        "../../app/header/offcanvasBody/OffcanvasBody.scss"
-    ],
-    "names": [],
-    "file": "OffcanvasBody.min.css"
-}

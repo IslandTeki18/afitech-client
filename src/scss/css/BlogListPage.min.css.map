@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AACI,eADW,CACX,WAAW,AAAC,CACR,MAAM,CAAE,CAAC,CAAC,KAAK,CAAc,IAAO,CACpC,aAAa,CAAE,GAAG,CAAC,KAAK,CAAc,eAAO,CAChD",
-    "sources": [
-        "../../pages/blogListPage/BlogListPage.scss"
-    ],
-    "names": [],
-    "file": "BlogListPage.min.css"
-}

@@ -1,0 +1,19 @@
+.dkPricingSection {
+  .pricingCard {
+    padding: 30px;
+    display: inline-block;
+    width: 100%;
+    border-radius: 16px;
+    margin-bottom: 20px;
+
+    .benefitIcons {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        
+        .dkIconLabel {
+            justify-content: flex-start;
+        }
+    }
+  }
+}

@@ -59,6 +59,9 @@ const ServiceDetailsPage = () => {
         </div>
       ));
   }
+  if (!service) {
+    return <Loader />
+  }
   return (
     <div className="dkServiceDetailsPage">
       <section id="serviceHeaderSection" className="py-5">

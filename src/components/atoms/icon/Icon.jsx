@@ -5,11 +5,13 @@ export const Icon = (props) => {
   function renderFontAwesomeStyle(style) {
     switch (style) {
       case "fas":
-        return "fas";
+        return "fa-solid";
       case "far":
-        return "far";
+        return "fa-regular";
       case "fab":
-        return "fab";
+        return "fa-brands";
+      case "fat":
+        return "fa-thin";
       default:
         return "fas";
     }

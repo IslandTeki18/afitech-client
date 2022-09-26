@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../../pages/serviceListPage/ServiceListPage.scss"
-    ],
-    "names": [],
-    "file": "ServiceListPage.min.css"
-}

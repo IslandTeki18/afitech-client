@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../../components/contactForm/ContactForm.scss"
-    ],
-    "names": [],
-    "file": "ContactForm.min.css"
-}
