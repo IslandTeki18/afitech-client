@@ -7,6 +7,7 @@ import {
   StrategyDesignSection,
   PricingSection,
   LetsWorkTogetherSection,
+  WhoWeAreSection,
 } from "../../components";
 import { Link, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -50,7 +51,7 @@ const HomePage = () => {
 
   return (
     <div className="dkHomePage">
-      <HelpBusinessSection />
+      <WhoWeAreSection />
       <StrategyDesignSection services={services} />
       <PricingSection />
       <LetsWorkTogetherSection />

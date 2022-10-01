@@ -8,7 +8,7 @@ export const IconLabel = (props) => {
     <div className="dkIconLabel">
       <Icon
         icon={props.icon}
-        size={20}
+        size="20"
         color={props.iconColor}
         iconStyle={props.iconStyle}
       />

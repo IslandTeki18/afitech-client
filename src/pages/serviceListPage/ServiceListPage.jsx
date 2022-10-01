@@ -16,6 +16,7 @@ const ServiceListPage = () => {
   }, [dispatch]);
 
   function serviceListItem() {
+    if (!services.isAvailable) return renderNoServices();
     return services
       .filter((service) => service.isAvailable)
       .map((item, idx) => (
@@ -50,6 +51,16 @@ const ServiceListPage = () => {
           </div>
         </div>
       ));
+  }
+
+  function renderNoServices() {
+    return (
+      <div className="py-5">
+        <h2 className="text-center py-5">
+          We are not currently running any services that are available at this moment...
+        </h2>
+      </div>
+    );
   }
 
   return (

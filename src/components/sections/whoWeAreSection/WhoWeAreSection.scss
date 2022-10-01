@@ -1,0 +1,21 @@
+.dkWhoWeAreSection {
+    background-image: url("../../../assets/images/stacked-steps-haikei.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+
+    .sectionContentWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .buttonWrapper {
+            display: flex;
+            gap: 10px;
+        }
+    }
+    .centerImage {
+        display: flex;
+        justify-content: center;
+    }
+}

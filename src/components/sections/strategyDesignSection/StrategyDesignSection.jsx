@@ -40,6 +40,10 @@ export const StrategyDesignSection = (props) => {
   );
 };
 
+StrategyDesignSection.defaultProps = {
+  id: 'StrategyDesignSection'
+}
+
 StrategyDesignSection.propTypes = {
   id: PropTypes.string,
   services: PropTypes.array,
