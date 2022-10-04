@@ -1,21 +1,31 @@
 .dkWhoWeAreSection {
-    background-image: url("../../../assets/images/stacked-steps-haikei.svg");
+  background-image: url("../../../assets/images/stacked-steps-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 425px) {
+    background-image: url("../../../assets/images/mobile-wave-haikei.svg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position: center;
+  }
 
-    .sectionContentWrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+  .sectionContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-        .buttonWrapper {
-            display: flex;
-            gap: 10px;
-        }
+    .buttonWrapper {
+      display: flex;
+      gap: 10px;
     }
-    .centerImage {
-        display: flex;
-        justify-content: center;
-    }
+  }
+  .centerImage {
+    display: flex;
+    justify-content: center;
+  }
+  .mobileSpace {
+    margin-top: 30px;
+  }
 }

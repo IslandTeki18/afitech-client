@@ -26,8 +26,8 @@ export const StrategyDesignSection = (props) => {
   return (
     <section className="dkStrategyDesignSection" id={props.id}>
       <div className="container">
-        <div className="textWrapper">
-          <h2>Through strategy and design, we create beautiful results.</h2>
+        <div className="textWrapper pb-5">
+          <h2 className="display-6">Through strategy and design, we create beautiful results.</h2>
           <p className="text-muted">
             We strive to make the best products for growth and expandition
           </p>

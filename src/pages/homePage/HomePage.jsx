@@ -16,6 +16,7 @@ import { listProjects } from "../../redux/actions/project.actions";
 import { listTestimonials } from "../../redux/actions/testimonial.actions";
 import { listServices } from "../../redux/actions/service.actions";
 import blackSandImage from "../../assets/images/black-sand.jpg";
+import { WhatWeOfferSection } from "../../components/sections/whatWeOfferSection/WhatWeOfferSection";
 
 const HomePage = () => {
   const history = useHistory();
@@ -52,7 +53,7 @@ const HomePage = () => {
   return (
     <div className="dkHomePage">
       <WhoWeAreSection />
-      <StrategyDesignSection services={services} />
+      <WhatWeOfferSection services={services} />
       <PricingSection />
       <LetsWorkTogetherSection />
     </div>

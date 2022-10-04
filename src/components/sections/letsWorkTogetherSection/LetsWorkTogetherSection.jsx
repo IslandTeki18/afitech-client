@@ -7,16 +7,20 @@ import { IconLabel } from "../../molecules/iconLabel";
 export const LetsWorkTogetherSection = (props) => {
   const history = useHistory();
   return (
-    <div className="dkLetsWorkTogetherSection" id={props.id}>
+    <section
+      className={`dkLetsWorkTogetherSection bg-${props.theme}`}
+      id={props.id}
+    >
       <div className="container d-flex justify-content-between align-items-center">
         <IconLabel
           label="AFI TECH"
           icon="fire-flame-curved"
           iconStyle="fas"
-          iconColor="#000"
+          iconColor={props.theme === "dark" ? "#d33636" : "#212729"}
+          labelClassName="text-light"
         />
         <div className="ctaWrapper">
-          <h5>Ready to get started?</h5>
+          <h5 className="text-light">Ready to get started?</h5>
           <button
             className="btn btn-primary"
             onClick={() => history.push("/pricing")}
@@ -25,8 +29,13 @@ export const LetsWorkTogetherSection = (props) => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
+};
+
+LetsWorkTogetherSection.defaultProps = {
+  id: "LetsWorkTogetherSection",
+  theme: "dark",
 };
 
 LetsWorkTogetherSection.propTypes = {

@@ -22,9 +22,9 @@ export const WhoWeAreSection = (props) => {
               </button>
             </div>
           </div>
-          <div className="col-lg-6 centerImage">
+          <div className="col-lg-6 centerImage mobileSpace">
             <img
-              className="img"
+              className="img-fluid"
               src="https://via.placeholder.com/500x400"
               alt="placeholder"
             />

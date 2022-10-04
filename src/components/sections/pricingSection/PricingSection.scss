@@ -1,4 +1,12 @@
 .dkPricingSection {
+  background-image: url("../../../assets/images/layered-waves-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .planHeader {
+    margin-bottom: 50px;
+  }
+
   .pricingCard {
     padding: 30px;
     display: inline-block;
@@ -7,13 +15,13 @@
     margin-bottom: 20px;
 
     .benefitIcons {
-        display: flex;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+
+      .dkIconLabel {
         justify-content: flex-start;
-        flex-direction: column;
-        
-        .dkIconLabel {
-            justify-content: flex-start;
-        }
+      }
     }
   }
 }

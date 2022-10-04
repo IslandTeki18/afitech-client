@@ -28,7 +28,7 @@ export const PricingSection = (props) => {
               />
             ))}
           </div>
-          <div className="benefitIcons">
+          <div className="benefitIcons mb-4">
             {item.cons.map((con, idx) => (
               <IconLabel
                 label={con}
@@ -39,7 +39,8 @@ export const PricingSection = (props) => {
               />
             ))}
           </div>
-          <button className="btn btn-outline-primary">Get Started</button>
+          {!item.isAvailable && <p className="text-center text-danger">This plan is not available at the moment.</p>}
+          <button disabled={!item.isAvailable} className="btn btn-outline-primary">Get Started</button>
         </div>
       </div>
     ));
@@ -49,7 +50,7 @@ export const PricingSection = (props) => {
     <section className="dkPricingSection" id={props.id}>
       <div className="container">
         <div className="d-flex justify-content-center align-items-center text-center">
-          <h2>Choose the best plan that best works for you?</h2>
+          <h2 className="planHeader display-5 text-white">Choose the best plan that best works for you?</h2>
         </div>
       </div>
       <div className="container">
@@ -60,7 +61,7 @@ export const PricingSection = (props) => {
 };
 
 PricingSection.defaultProps = {
-  id: "pricingSection",
+  id: "PricingSection",
 };
 
 PricingSection.propTypes = {

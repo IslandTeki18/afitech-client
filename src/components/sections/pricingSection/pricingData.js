@@ -21,9 +21,9 @@ export const PRICING_TIERS = [
       highPrice: 15000,
       tierType: "Business",
       description:
-        "If you need specific features on your website built, a bigger web application, a full redesign of youre current site, look no further as this plan is a 'Rock' solid choice.",
+        "Has your business grown out of the wix or wordpress stage and you're ready to take your business growth to the next level? Experience a fully flushed out web design that fits your business needs in The Fire Plan!",
       pros: [
-        "5 to 15 pages",
+        "Up to 15 pages",
         "Dedicated Designer",
         "Style guide / custom designs",
         "Basic Ecommerce Funcionality",
@@ -38,7 +38,7 @@ export const PRICING_TIERS = [
       highPrice: null,
       tierType: "Enterprise",
       description:
-        "When you're to take your business to the next level of growth, the boulder plan is for you. This includes a team of developers, a designer, a qa engineer, and a project manager.",
+        "When you're ready to take your business to the next level of growth, the Wildfire Plan is for you. This includes a dedicated team of developers, a designer, a qa engineer, and a project manager.",
       pros: [
         "Up to 30 pages",
         "Multi Application",

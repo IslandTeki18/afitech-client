@@ -1,8 +1,18 @@
 .dkHomePage {
-    #WhoWeAreSection {
-        padding: 150px 0;
+  #WhoWeAreSection {
+    padding: 150px 0;
+
+    @media screen and (max-width: 450px) {
+      padding: 100px 0;
     }
-    #StrategyDesignSection {
-        padding: 100px 0;
-    }
+  }
+  #WhatWeOfferSection {
+    padding: 100px 0;
+  }
+  #StrategyDesignSection {
+    padding: 100px 0;
+  }
+  #PricingSection {
+    padding: 100px 0;
+  }
 }

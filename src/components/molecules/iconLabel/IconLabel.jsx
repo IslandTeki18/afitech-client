@@ -12,10 +12,14 @@ export const IconLabel = (props) => {
         color={props.iconColor}
         iconStyle={props.iconStyle}
       />
-      <h6>{props.label}</h6>
+      <h6 className={props.labelClassName}>{props.label}</h6>
     </div>
   );
 };
+
+IconLabel.defaultProps = {
+  labelClassName: "IconLabelClassName"
+}
 
 IconLabel.propTypes = {
   id: PropTypes.string,
@@ -23,4 +27,5 @@ IconLabel.propTypes = {
   icon: PropTypes.string,
   iconColor: PropTypes.string,
   iconStyle: PropTypes.string,
+  labelClassName: PropTypes.string
 };

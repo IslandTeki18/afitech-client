@@ -1,3 +1,24 @@
 .dkWhatWeOfferSection {
-    
+  background-image: url("../../../assets/images/whatwedobackground-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .card {
+    padding: 20px 10px;
+    border-radius: 30px;
+    .iconWrapper {
+      display: flex;
+      justify-content: center;
+      .specialIcon {
+        width: 100px;
+        height: 100px;
+        background-color: #dfa80455;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+  }
 }
